@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://eeittxr6y821"]
+
+[ext_resource type="Script" uid="uid://bkuemymlf1tn7" path="res://scenes/cutscenes/cutscene_intro.gd" id="1_byp0a"]
+
+[node name="CutsceneIntro" type="CanvasLayer" unique_id=772300923]
+script = ExtResource("1_byp0a")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1804857282]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="SlideImage" type="TextureRect" parent="." unique_id=1740686734]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+
+[node name="SlideText" type="Label" parent="." unique_id=31874488]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Overlay" type="ColorRect" parent="." unique_id=1856441785]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
