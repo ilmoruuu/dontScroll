@@ -22,10 +22,18 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 	
-	if direction > 0:
-		animation.flip_h = false
-	elif direction < 0:
-		animation.flip_h = true
+	if is_on_floor():
+		if direction > 0:
+			animation.flip_h = false
+			animation.play("walk")
+		elif direction < 0:
+			animation.flip_h = true
+			animation.play("walk")
+		else:
+			animation.play("idle")
+	else:
+		animation.play("jump")
+		
 	move_and_slide()
 
 	# BEM sobe continuamente enquanto estiver em cima de plataforma
