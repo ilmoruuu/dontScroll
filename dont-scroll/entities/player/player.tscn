@@ -44,6 +44,11 @@ animations = [{
 "loop": 1,
 "name": &"idle",
 "speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"walk",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k80x8"]
@@ -54,9 +59,8 @@ script = ExtResource("1_wr5hl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=825959208]
 sprite_frames = SubResource("SpriteFrames_lnu2h")
-animation = &"idle"
+animation = &"walk"
 autoplay = "idle"
-frame_progress = 0.868713
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=661443857]
 visible = false
