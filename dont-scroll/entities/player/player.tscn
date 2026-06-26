@@ -1,26 +1,26 @@
 [gd_scene format=3 uid="uid://bp5hm4sl5mfxb"]
 
-[ext_resource type="Script" uid="uid://8px31bc2wu54" path="res://scripts/player.gd" id="1_merdl"]
-[ext_resource type="Texture2D" uid="uid://5mboahntf8m1" path="res://sprites/1 - player/Idle (16 x 16).png" id="2_b0kkn"]
+[ext_resource type="Script" uid="uid://8px31bc2wu54" path="res://entities/player/player.gd" id="1_abrql"]
+[ext_resource type="Texture2D" uid="uid://5mboahntf8m1" path="res://assets/player/Idle (16 x 16).png" id="2_abrql"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e4p34"]
-atlas = ExtResource("2_b0kkn")
+atlas = ExtResource("2_abrql")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rfe5m"]
-atlas = ExtResource("2_b0kkn")
+atlas = ExtResource("2_abrql")
 region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qly61"]
-atlas = ExtResource("2_b0kkn")
+atlas = ExtResource("2_abrql")
 region = Rect2(32, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qsoyl"]
-atlas = ExtResource("2_b0kkn")
+atlas = ExtResource("2_abrql")
 region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6nm46"]
-atlas = ExtResource("2_b0kkn")
+atlas = ExtResource("2_abrql")
 region = Rect2(64, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_m5a1v"]
@@ -50,13 +50,13 @@ animations = [{
 size = Vector2(15, 15)
 
 [node name="Player" type="CharacterBody2D" unique_id=729311531]
-script = ExtResource("1_merdl")
+script = ExtResource("1_abrql")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=726616541]
 sprite_frames = SubResource("SpriteFrames_m5a1v")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.49632633
+frame_progress = 0.98727393
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=604222424]
 visible = false
