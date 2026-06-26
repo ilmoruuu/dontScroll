@@ -17,8 +17,10 @@ config/icon="res://icon.svg"
 
 [display]
 
+window/size/viewport_width=150
+window/size/viewport_height=100
+window/size/mode=2
 window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
 
 [physics]
 
@@ -26,5 +28,6 @@ window/stretch/aspect="expand"
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="mobile"
