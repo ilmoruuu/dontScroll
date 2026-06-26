@@ -2,8 +2,13 @@
 
 [ext_resource type="Script" uid="uid://tuuewfg8r0x3" path="res://entities/player/player.gd" id="1_wr5hl"]
 [ext_resource type="Texture2D" uid="uid://5mboahntf8m1" path="res://assets/player/Idle (16 x 16).png" id="2_abrql"]
+[ext_resource type="Texture2D" uid="uid://yioxxb4xlhev" path="res://assets/player/Hurt (16 x 16).png" id="2_fkugw"]
 [ext_resource type="Texture2D" uid="uid://nqgil0bym46k" path="res://assets/player/Jump (16 x 16).png" id="3_bls4j"]
 [ext_resource type="Texture2D" uid="uid://dqlpm7ecqqbne" path="res://assets/player/Waddling (16 x 16).png" id="3_sglur"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_afbqv"]
+atlas = ExtResource("2_fkugw")
+region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_abrql"]
 atlas = ExtResource("2_abrql")
@@ -55,6 +60,14 @@ region = Rect2(80, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lnu2h"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_afbqv")
+}],
+"loop": 1,
+"name": &"hurt",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_abrql")
@@ -115,8 +128,9 @@ script = ExtResource("1_wr5hl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=825959208]
 sprite_frames = SubResource("SpriteFrames_lnu2h")
-animation = &"jump"
+animation = &"idle"
 autoplay = "idle"
+frame_progress = 0.29377514
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=661443857]
 visible = false
