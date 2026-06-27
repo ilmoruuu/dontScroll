@@ -1,28 +1,121 @@
-[gd_scene format=3 uid="uid://b5hogq42fsios"]
+[gd_scene format=4 uid="uid://b5hogq42fsios"]
 
 [ext_resource type="PackedScene" uid="uid://d233rvyx64hw4" path="res://entities/player/player.tscn" id="1_yo6j7"]
-[ext_resource type="PackedScene" uid="uid://7y2ohpt4rivb" path="res://entities/platforms/platforms.tscn" id="2_5lt65"]
+[ext_resource type="PackedScene" uid="uid://2ymphgwd4s1q" path="res://entities/platforms/platform.tscn" id="2_051w3"]
+[ext_resource type="PackedScene" uid="uid://cp5omlcb70p3p" path="res://entities/platforms/platformVertical.tscn" id="3_745wh"]
+[ext_resource type="PackedScene" uid="uid://b0l624biomxqs" path="res://entities/platforms/platformBlink.tscn" id="4_4bc74"]
+[ext_resource type="PackedScene" uid="uid://cnhwiul8mcx8m" path="res://entities/platforms/platformHorizontal.tscn" id="5_mffd4"]
+[ext_resource type="Texture2D" uid="uid://bslxjob44kog8" path="res://assets/tilesets/tile.png" id="6_745wh"]
+[ext_resource type="Texture2D" uid="uid://665p2ayilrxh" path="res://assets/tilesets/tilset2.png" id="7_4bc74"]
+[ext_resource type="PackedScene" uid="uid://ddhxcu8xpmlwj" path="res://scenes/levels/killzone.tscn" id="8_mffd4"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_k80x8"]
-size = Vector2(94, 13)
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_4bc74"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4bc74"]
+texture = ExtResource("6_745wh")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, -8, 8, -8, -8, 8, -8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, 8, 8, 8, 8, -8)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 4.4396324, -8, 8, -8, -8)
+2:2/0/physics_layer_0/polygon_1/points = PackedVector2Array(8, -8, -8, -8, -8, 8, 8, 8)
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mffd4"]
+texture = ExtResource("7_4bc74")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -0.78346443, -8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_gfa0o"]
+physics_layer_0/collision_layer = 1
+physics_layer_0/physics_material = SubResource("PhysicsMaterial_4bc74")
+sources/2 = SubResource("TileSetAtlasSource_4bc74")
+sources/3 = SubResource("TileSetAtlasSource_mffd4")
 
 [node name="Fase1" type="Node2D" unique_id=824388027 groups=["platform"]]
 
-[node name="Player" parent="." unique_id=105345503 instance=ExtResource("1_yo6j7")]
-position = Vector2(49, 4)
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1390131299]
+custom_minimum_size = Vector2(40, 0)
+anchors_preset = -1
+offset_left = -364.0
+offset_top = -331.0
+offset_right = 3699.0
+offset_bottom = 638.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0.07058824, 1)
 
-[node name="Chao" type="StaticBody2D" parent="." unique_id=2085114010]
-position = Vector2(15, 250)
+[node name="Player" parent="." unique_id=105345503 groups=["player"] instance=ExtResource("1_yo6j7")]
+position = Vector2(-88, 144)
 
-[node name="ColorRect" type="ColorRect" parent="Chao" unique_id=1042671749]
-offset_left = -10.0
-offset_top = 23.0
-offset_right = 84.0
-offset_bottom = 36.0
+[node name="Plataformas" type="Node2D" parent="." unique_id=372417128]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Chao" unique_id=1044988332]
-position = Vector2(37, 29.5)
-shape = SubResource("RectangleShape2D_k80x8")
+[node name="Platform" parent="Plataformas" unique_id=1653562887 instance=ExtResource("2_051w3")]
+position = Vector2(16, 144)
 
-[node name="Plataforms" parent="." unique_id=1276451516 instance=ExtResource("2_5lt65")]
-position = Vector2(157, 278)
+[node name="Platform4" parent="Plataformas" unique_id=313582456 instance=ExtResource("2_051w3")]
+position = Vector2(1104, 80)
+
+[node name="Platform2" parent="Plataformas" unique_id=1567841240 instance=ExtResource("2_051w3")]
+position = Vector2(416, 176)
+
+[node name="PlatformVertical" parent="Plataformas" unique_id=2094776823 instance=ExtResource("3_745wh")]
+position = Vector2(88, 103)
+
+[node name="PlatformVertical5" parent="Plataformas" unique_id=1977518990 instance=ExtResource("3_745wh")]
+position = Vector2(824, 96)
+
+[node name="PlatformVertical4" parent="Plataformas" unique_id=1358782588 instance=ExtResource("3_745wh")]
+position = Vector2(190, 48)
+
+[node name="PlatformVertical2" parent="Plataformas" unique_id=1376744821 instance=ExtResource("3_745wh")]
+position = Vector2(184, 144)
+
+[node name="PlatformVertical3" parent="Plataformas" unique_id=351965363 instance=ExtResource("3_745wh")]
+position = Vector2(711, 128)
+amplitude = 20.0
+
+[node name="PlatformBrink" parent="Plataformas" unique_id=393779538 instance=ExtResource("4_4bc74")]
+position = Vector2(272, 112)
+
+[node name="PlatformBrink2" parent="Plataformas" unique_id=1463533790 instance=ExtResource("4_4bc74")]
+position = Vector2(565, 84)
+
+[node name="PlatformHorizontal" parent="Plataformas" unique_id=1118858037 instance=ExtResource("5_mffd4")]
+position = Vector2(510, 143)
+
+[node name="PlatformHorizontal3" parent="Plataformas" unique_id=586580635 instance=ExtResource("5_mffd4")]
+position = Vector2(427, 69)
+
+[node name="PlatformHorizontal2" parent="Plataformas" unique_id=433016487 instance=ExtResource("5_mffd4")]
+position = Vector2(608, 181)
+
+[node name="PlatformHorizontal4" parent="Plataformas" unique_id=401069339 instance=ExtResource("5_mffd4")]
+position = Vector2(1048, 208)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1434571743]
+tile_map_data = PackedByteArray("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AAA2AAAAAgABAAIAAAA3AAAAAgABAAIAAAA4AAAAAgABAAIAAAA5AAAAAgABAAIAAAA6AAAAAgABAAIAAAA7AAAAAgABAAIAAAA8AAAAAgABAAIAAAA9AAAAAgABAAIAAAA+AAAAAgABAAIAAAA/AAAAAgABAAIAAABAAAAAAgABAAIAAABBAAAAAgABAAIAAABCAAAAAgABAAIAAABDAAAAAgABAAIAAABEAAAAAgABAAIAAABFAAAAAgABAAIAAABGAAAAAgABAAIAAABHAAAAAgABAAIAAABIAAAAAgABAAIAAABJAAAAAwABAAAAAAA/AAgAAgABAAAAAABAAAgAAgABAAAAAABBAAgAAgABAAAAAAA/AAkAAgABAAIAAABAAAkAAgABAAIAAABBAAkAAgABAAIAAAA+AAgAAgAAAAAAAAA+AAkAAgAAAAIAAABCAAgAAgACAAAAAABCAAkAAgACAAIAAAA4AAwAAgAAAAAAAAA4AA0AAgAAAAIAAAAVABIAAgAAAAEAAAAjAA8AAgACAAAAAAAnAA8AAgAAAAAAAAAnABAAAgAAAAEAAAAnABEAAgAAAAEAAAAjABAAAgACAAEAAAAjABEAAgACAAEAAAAjABIAAgACAAEAAAAnABIAAgAAAAEAAACu/+T/AgAAAAEAAACV/9v/AgAAAAEAAAA=")
+tile_set = SubResource("TileSet_gfa0o")
+
+[node name="Killzone" parent="." unique_id=1128831628 instance=ExtResource("8_mffd4")]
+position = Vector2(264, 273)
+
+[node name="Killzone2" parent="." unique_id=753596741 instance=ExtResource("8_mffd4")]
+position = Vector2(550, 273)

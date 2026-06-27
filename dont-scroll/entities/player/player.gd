@@ -13,7 +13,7 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMP_VELOCITY
 
 	var direction = Input.get_axis("ui_left", "ui_right")
-	var speed = SPEED * GameManager.player_speed_mult
+	var speed = SPEED * GameManager.get_player_speed_mult()
 
 	if direction != 0:
 		velocity.x = direction * speed
