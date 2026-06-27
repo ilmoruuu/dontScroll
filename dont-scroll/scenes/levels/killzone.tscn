@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://ddhxcu8xpmlwj"]
+
+[ext_resource type="Script" uid="uid://lih56v7wsyxo" path="res://scenes/levels/killzone.gd" id="1_mlifx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k80x8"]
+size = Vector2(100, 55.5)
+
+[node name="Killzone" type="Area2D" unique_id=1128831628]
+script = ExtResource("1_mlifx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1556620687]
+position = Vector2(50, 2.75)
+shape = SubResource("RectangleShape2D_k80x8")
