@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://b0l624biomxqs"]
+
+[ext_resource type="Script" uid="uid://dj03rx565tv0p" path="res://entities/platforms/platform_blink.gd" id="1_xpepq"]
+[ext_resource type="Texture2D" uid="uid://dm3htxyu28uca" path="res://assets/platforms/blinck.png" id="2_uacs5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k80x8"]
+size = Vector2(56, 18)
+
+[node name="PlatformBrink" type="AnimatableBody2D" unique_id=2094776823 groups=["platform"]]
+script = ExtResource("1_xpepq")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1167996032]
+offset_left = 4.0
+offset_top = -5.0
+offset_right = 68.0
+offset_bottom = 59.0
+texture = ExtResource("2_uacs5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=45296791]
+position = Vector2(36, 25)
+shape = SubResource("RectangleShape2D_k80x8")
+
+[node name="Timer" type="Timer" parent="." unique_id=900850637]

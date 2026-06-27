@@ -130,7 +130,7 @@ script = ExtResource("1_wr5hl")
 sprite_frames = SubResource("SpriteFrames_lnu2h")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.29377514
+frame_progress = 0.7739523
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=661443857]
 visible = false
@@ -140,10 +140,9 @@ shape = SubResource("RectangleShape2D_k80x8")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1068141356]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=841866677]
+visible = false
 offset_left = -10.0
 offset_top = -10.0
 offset_right = 10.0
 offset_bottom = 10.0
 color = Color(0.70035434, 0.0039975718, 0.27824256, 1)
-limit_top = -10
-limit_bottom = 270
