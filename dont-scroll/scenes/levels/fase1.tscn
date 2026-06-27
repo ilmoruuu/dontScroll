@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://b5hogq42fsios"]
+
+[ext_resource type="PackedScene" uid="uid://d233rvyx64hw4" path="res://entities/player/player.tscn" id="1_yo6j7"]
+[ext_resource type="PackedScene" uid="uid://7y2ohpt4rivb" path="res://entities/platforms/platforms.tscn" id="2_5lt65"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k80x8"]
+size = Vector2(94, 13)
+
+[node name="Fase1" type="Node2D" unique_id=824388027 groups=["platform"]]
+
+[node name="Player" parent="." unique_id=105345503 instance=ExtResource("1_yo6j7")]
+position = Vector2(49, 4)
+
+[node name="Chao" type="StaticBody2D" parent="." unique_id=2085114010]
+position = Vector2(15, 250)
+
+[node name="ColorRect" type="ColorRect" parent="Chao" unique_id=1042671749]
+offset_left = -10.0
+offset_top = 23.0
+offset_right = 84.0
+offset_bottom = 36.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chao" unique_id=1044988332]
+position = Vector2(37, 29.5)
+shape = SubResource("RectangleShape2D_k80x8")
+
+[node name="Plataforms" parent="." unique_id=1276451516 instance=ExtResource("2_5lt65")]
+position = Vector2(157, 278)
