@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+@onready var animation: AnimatedSprite2D = $AnimatedSprite2D
+
 const SPEED = 80.0
 const JUMP_VELOCITY = -280.0
 const GRAVITY = 600.0
@@ -19,7 +21,19 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction * speed
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
-
+	
+	if is_on_floor():
+		if direction > 0:
+			animation.flip_h = false
+			animation.play("walk")
+		elif direction < 0:
+			animation.flip_h = true
+			animation.play("walk")
+		else:
+			animation.play("idle")
+	else:
+		animation.play("jump")
+		
 	move_and_slide()
 
 	# BEM sobe continuamente enquanto estiver em cima de plataforma
