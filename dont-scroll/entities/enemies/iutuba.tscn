@@ -1,22 +1,22 @@
 [gd_scene format=3 uid="uid://c2a8len2vs3wb"]
 
-[ext_resource type="Texture2D" uid="uid://c5yjs6xbur8bu" path="res://assets/enemies/iutuba.png" id="1_w8726"]
+[ext_resource type="Texture2D" uid="uid://c5yjs6xbur8bu" path="res://assets/enemies/iutuba.png" id="1_18cw2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qdcf5"]
 radius = 15.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bs6bc"]
-atlas = ExtResource("1_w8726")
+atlas = ExtResource("1_18cw2")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lfyx4"]
-atlas = ExtResource("1_w8726")
+atlas = ExtResource("1_18cw2")
 region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jqp7e"]
 animations = [{
 "frames": [{
-"duration": 1.0,
+"duration": 3.3,
 "texture": SubResource("AtlasTexture_bs6bc")
 }, {
 "duration": 1.0,
@@ -39,4 +39,5 @@ position = Vector2(60, 80)
 scale = Vector2(1.9375, 2)
 sprite_frames = SubResource("SpriteFrames_jqp7e")
 animation = &"idle"
-frame_progress = 0.80736804
+autoplay = "idle"
+frame_progress = 0.717402
