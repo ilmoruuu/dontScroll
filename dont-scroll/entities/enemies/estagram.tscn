@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://wvwtw3mekkrb"]
+
+[ext_resource type="Texture2D" uid="uid://b5cciutesjmpg" path="res://assets/enemies/estagram.png" id="1_0bfnc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jqp7e"]
+size = Vector2(14, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w5tfi"]
+atlas = ExtResource("1_0bfnc")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1e1kb"]
+atlas = ExtResource("1_0bfnc")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jqp7e"]
+animations = [{
+"frames": [{
+"duration": 3.3,
+"texture": SubResource("AtlasTexture_w5tfi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1e1kb")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="estagram" type="CharacterBody2D" unique_id=99027874]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1548025869]
+position = Vector2(47, 27.5)
+shape = SubResource("RectangleShape2D_jqp7e")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=159725757]
+position = Vector2(47, 28)
+sprite_frames = SubResource("SpriteFrames_jqp7e")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.8076209

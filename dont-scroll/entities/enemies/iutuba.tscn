@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://c2a8len2vs3wb"]
+
+[ext_resource type="Texture2D" uid="uid://c5yjs6xbur8bu" path="res://assets/enemies/iutuba.png" id="1_w8726"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qdcf5"]
+radius = 15.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bs6bc"]
+atlas = ExtResource("1_w8726")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lfyx4"]
+atlas = ExtResource("1_w8726")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jqp7e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bs6bc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lfyx4")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="iutuba" type="CharacterBody2D" unique_id=270139472]
+position = Vector2(231, 133)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=200818072]
+position = Vector2(60, 82)
+shape = SubResource("CircleShape2D_qdcf5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=472565783]
+position = Vector2(60, 80)
+scale = Vector2(1.9375, 2)
+sprite_frames = SubResource("SpriteFrames_jqp7e")
+animation = &"idle"
+frame_progress = 0.80736804
