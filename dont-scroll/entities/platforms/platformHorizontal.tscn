@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cnhwiul8mcx8m"]
+
+[ext_resource type="Script" uid="uid://o2mdu0poyru3" path="res://entities/platforms/platform_horizontal.gd" id="1_vtd7c"]
+[ext_resource type="Texture2D" uid="uid://ceitxotb0kglb" path="res://assets/platforms/horizontal.png" id="2_h33sx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k80x8"]
+size = Vector2(56, 18)
+
+[node name="PlatformHorizontal" type="AnimatableBody2D" unique_id=2094776823 groups=["platform"]]
+script = ExtResource("1_vtd7c")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2117049222]
+offset_left = 4.0
+offset_top = -5.0
+offset_right = 68.0
+offset_bottom = 59.0
+texture = ExtResource("2_h33sx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=45296791]
+position = Vector2(36, 25)
+shape = SubResource("RectangleShape2D_k80x8")
