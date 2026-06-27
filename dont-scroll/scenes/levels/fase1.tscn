@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://b5hogq42fsios"]
 
+[ext_resource type="PackedScene" uid="uid://cyqngwh0fw0rp" path="res://entities/exposition_bar/exposition_bar.tscn" id="1_f125c"]
 [ext_resource type="PackedScene" uid="uid://d233rvyx64hw4" path="res://entities/player/player.tscn" id="1_yo6j7"]
 [ext_resource type="PackedScene" uid="uid://2ymphgwd4s1q" path="res://entities/platforms/platform.tscn" id="2_051w3"]
 [ext_resource type="PackedScene" uid="uid://cp5omlcb70p3p" path="res://entities/platforms/platformVertical.tscn" id="3_745wh"]
@@ -51,13 +52,23 @@ sources/3 = SubResource("TileSetAtlasSource_mffd4")
 
 [node name="Fase1" type="Node2D" unique_id=824388027 groups=["platform"]]
 
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2013826959]
+
+[node name="ProgressBar" parent="CanvasLayer" unique_id=1379656205 node_paths=PackedStringArray("target") instance=ExtResource("1_f125c")]
+offset_left = 16.0
+offset_top = 24.0
+offset_right = 116.0
+offset_bottom = 39.0
+max_value = 88.4
+target = NodePath("../../Player")
+
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1390131299]
 custom_minimum_size = Vector2(40, 0)
 anchors_preset = -1
-offset_left = -364.0
-offset_top = -331.0
-offset_right = 3699.0
-offset_bottom = 638.0
+offset_left = -589.0
+offset_top = -278.0
+offset_right = 3474.0
+offset_bottom = 691.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0.07058824, 1)
@@ -115,7 +126,9 @@ tile_map_data = PackedByteArray("AAD8/woAAgABAAAAAAD7/woAAgABAAAAAAD6/woAAgABAAA
 tile_set = SubResource("TileSet_gfa0o")
 
 [node name="Killzone" parent="." unique_id=1128831628 instance=ExtResource("8_mffd4")]
+visible = false
 position = Vector2(264, 273)
 
 [node name="Killzone2" parent="." unique_id=753596741 instance=ExtResource("8_mffd4")]
+visible = false
 position = Vector2(550, 273)
