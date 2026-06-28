@@ -10,6 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://665p2ayilrxh" path="res://assets/tilesets/tilset2.png" id="7_4bc74"]
 [ext_resource type="PackedScene" uid="uid://ddhxcu8xpmlwj" path="res://scenes/levels/killzone.tscn" id="8_mffd4"]
 [ext_resource type="PackedScene" uid="uid://b85sosryqw0xk" path="res://entities/bench/bench.tscn" id="10_8uqc6"]
+[ext_resource type="PackedScene" uid="uid://28rqkifmmhr7" path="res://entities/PUs/PU_cap_and_pillow.tscn" id="11_mhm5o"]
+[ext_resource type="PackedScene" uid="uid://cyclxrltpbhhd" path="res://entities/PUs/PU_hammer.tscn" id="12_pvllh"]
+[ext_resource type="PackedScene" uid="uid://ckjmesgeei2jv" path="res://entities/PUs/PU_juice.tscn" id="13_d1ex0"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_4bc74"]
 
@@ -140,3 +143,12 @@ position = Vector2(270, 228)
 
 [node name="Bench" parent="." unique_id=1123229528 instance=ExtResource("10_8uqc6")]
 position = Vector2(-53, 149)
+
+[node name="Hammer" parent="." unique_id=327378327 instance=ExtResource("12_pvllh")]
+position = Vector2(32, 228)
+
+[node name="Pijama" parent="." unique_id=808263721 instance=ExtResource("11_mhm5o")]
+position = Vector2(127, 227)
+
+[node name="Juice" parent="." unique_id=1110919637 instance=ExtResource("13_d1ex0")]
+position = Vector2(81, 227)
