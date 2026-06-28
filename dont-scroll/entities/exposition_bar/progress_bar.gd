@@ -8,3 +8,4 @@ func _ready():
 
 func exposition_update():
 	value = target.expositon
+	AudioManager.update_exposition(target.expositon / 2)

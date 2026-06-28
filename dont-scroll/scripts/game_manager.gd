@@ -61,11 +61,14 @@ func bem_reduce(amount: float) -> void:
 
 func respawn() -> void:
 	bem = 0.0
+	AudioManager.play_death_effect()
 	is_crashed = false
 	get_tree().change_scene_to_file(checkpoint_scene)
 
 func game_over() -> void:
 	bem = 60.0
+	AudioManager.play_death_effect()
+	
 	is_crashed = false
 	inventory.clear()
 	get_tree().change_scene_to_file(checkpoint_scene)
