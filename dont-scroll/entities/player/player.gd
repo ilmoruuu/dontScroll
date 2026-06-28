@@ -8,38 +8,25 @@ enum PowerUpState { STANDARD, HAMMER, JUICE, PIJAMA }
 const SPEED = 80.0
 const JUMP_VELOCITY = -280.0
 const GRAVITY = 600.0
-const BEM_RATE_ON_PLATFORM = 2.0
-const EXPOSURE_DECAY_ON_BENCH = 3
+const EXPOSURE_DECAY_ON_BENCH = 3.0
 
-signal exposition_changed(value)
-
-var _exposition := 0.0
 var sitting := false
 var current_state = PowerUpState.STANDARD
 var sufix = ""
 var is_using_item = false
 
-var expositon: float:
-	get:
-		return _exposition
-	set(value):
-		_exposition = value
-		exposition_changed.emit()
-
 func _process(delta):
-
 	if sitting:
-		expositon = max(0.0, expositon - EXPOSURE_DECAY_ON_BENCH * delta)
+		GameManager.bem_reduce(EXPOSURE_DECAY_ON_BENCH * delta)
 		if Input.is_action_just_pressed("ui_left") \
 		or Input.is_action_just_pressed("ui_right") \
 		or Input.is_action_just_pressed("ui_accept"):
 			stand_up()
 
 func _physics_process(delta: float) -> void:
-	
 	if sitting:
 		return
-	
+
 	if not is_on_floor():
 		velocity.y += GRAVITY * delta
 
@@ -74,22 +61,9 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
-	if is_on_floor():
-		var collision = get_last_slide_collision()
-
-		if collision:
-			var collider = collision.get_collider()
-
-			if collider.is_in_group("platform"):
-				GameManager.bem_add(BEM_RATE_ON_PLATFORM * delta)
-				expositon += BEM_RATE_ON_PLATFORM * delta
-				print(expositon)
-
 func sit_on_bench(bench):
 	sitting = true
-
 	global_position = bench.get_node("SeatPosition").global_position
-
 	velocity = Vector2.ZERO
 
 func use_item():

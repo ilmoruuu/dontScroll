@@ -138,7 +138,10 @@ position = Vector2(264, 273)
 visible = false
 position = Vector2(550, 273)
 
-[node name="Bench" parent="." unique_id=746857454 instance=ExtResource("10_8uqc6")]
+[node name="Bench2" parent="." unique_id=746857454 instance=ExtResource("10_8uqc6")]
+position = Vector2(270, 228)
+
+[node name="Bench" parent="." unique_id=1123229528 instance=ExtResource("10_8uqc6")]
 position = Vector2(-53, 149)
 
 [node name="Hammer" parent="." unique_id=327378327 instance=ExtResource("12_pvllh")]
