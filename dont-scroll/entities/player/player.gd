@@ -7,8 +7,9 @@ const SPEED = 80.0
 const JUMP_VELOCITY = -280.0
 const GRAVITY = 600.0
 const BEM_RATE_ON_PLATFORM = 2.0
+const EXPOSURE_DECAY_ON_BENCH = 3
 
-signal exposition_changed
+signal exposition_changed(value)
 
 var _exposition := 0.0
 var sitting := false
@@ -20,10 +21,10 @@ var expositon: float:
 		_exposition = value
 		exposition_changed.emit()
 
-func _process(_delta):
+func _process(delta):
 
 	if sitting:
-
+		expositon = max(0.0, expositon - EXPOSURE_DECAY_ON_BENCH * delta)
 		if Input.is_action_just_pressed("ui_left") \
 		or Input.is_action_just_pressed("ui_right") \
 		or Input.is_action_just_pressed("ui_accept"):
