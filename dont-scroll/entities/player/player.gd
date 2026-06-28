@@ -136,5 +136,3 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 	if animation.animation == "attack_hammer":
 		is_using_item = false
 		hammer_hitbox.set_deferred("disabled", true)
-		
-	is_using_item = false
