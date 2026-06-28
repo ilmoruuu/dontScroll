@@ -10,7 +10,7 @@ func _on_area_2d_body_entered(body):
 	player_ref = body
 	prompt.visible = true
 
-func _on_area_2d_body_exited():
+func _on_area_2d_body_exited(body):
 	player_near = false
 	player_ref = null
 	prompt.visible = false

@@ -1,11 +1,8 @@
 extends ProgressBar
 
-@export var target: CharacterBody2D
-
 func _ready():
-	target.exposition_changed.connect(exposition_update)
-	exposition_update()
+	max_value = GameManager.bem_max
 
-func exposition_update():
-	value = target.expositon
-	AudioManager.update_exposition(target.expositon / 2)
+func _process(_delta):
+	value = GameManager.bem
+	AudioManager.update_exposition(GameManager.bem / 2)
