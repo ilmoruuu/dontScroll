@@ -3,7 +3,7 @@ extends Node
 # ── BEM (Barra de Exposição Mental) ──────────────────
 var bem: float = 0.0
 var bem_max: float = 100.0
-var bem_rate: float = 0.5
+var bem_rate: float = 2.0
 var player_on_bench: bool = false
 
 # ── Estado do jogador ─────────────────────────────────
@@ -55,14 +55,17 @@ func bem_add(amount: float) -> void:
 
 func bem_reduce(amount: float) -> void:
 	bem = clamp(bem - amount, 0.0, bem_max)
-	if is_crashed and bem < bem_max - 10.0:
+	if is_crashed and bem < bem_max - 20.0:
 		is_crashed = false
 		crash_timer = 0.0
 
 func respawn() -> void:
 	bem = 0.0
-	AudioManager.play_death_effect()
 	is_crashed = false
+	call_deferred("_do_respawn")
+
+func _do_respawn() -> void:
+	AudioManager.play_death_effect()
 	get_tree().change_scene_to_file(checkpoint_scene)
 
 func game_over() -> void:
