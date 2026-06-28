@@ -10,11 +10,14 @@
 [ext_resource type="Texture2D" uid="uid://c64x50tnl0ur7" path="res://assets/player/Idle_Juice (16 x 16).png" id="5_qiwj3"]
 [ext_resource type="Texture2D" uid="uid://d3xa5ojy04qr8" path="res://assets/player/Idle_Pijama (16 x 16).png" id="6_26q78"]
 [ext_resource type="Texture2D" uid="uid://bwwmy8812b02r" path="res://assets/player/Jump_Pijama (16 x 16).png" id="9_a1qjk"]
+[ext_resource type="Texture2D" uid="uid://bhoe5wgqpb6v8" path="res://assets/player/Jump_Hammer (16 x 16).png" id="9_mtric"]
 [ext_resource type="Texture2D" uid="uid://dkx2lx1f01sin" path="res://assets/player/Idle_Vertigo (16 x 16).png" id="9_yqrof"]
 [ext_resource type="Texture2D" uid="uid://dewcw5vv7wwtw" path="res://assets/player/Walking (16 x 16).png" id="10_7thud"]
+[ext_resource type="Texture2D" uid="uid://dhaw0iuw2qanw" path="res://assets/player/Jump_Juice (16 x 16).png" id="10_eyb6c"]
 [ext_resource type="Texture2D" uid="uid://g5lftksj7x4u" path="res://assets/player/Use_Pijama (16 x 16).png" id="11_j3ovn"]
 [ext_resource type="Texture2D" uid="uid://bu8786g5fwrpk" path="res://assets/player/Jump_Vertigo (16 x 16).png" id="12_3wlsy"]
 [ext_resource type="Texture2D" uid="uid://boojv12v7k1wx" path="res://assets/player/Walking_Juice (16 x 16).png" id="15_3wlsy"]
+[ext_resource type="Texture2D" uid="uid://chhn1spiqesj3" path="res://assets/player/Walking_Hammer (16 x 16).png" id="15_b2kln"]
 [ext_resource type="Texture2D" uid="uid://duh74110uugr5" path="res://assets/player/Walking_Vertigo (16 x 16).png" id="16_b2kln"]
 [ext_resource type="Texture2D" uid="uid://dkfksggsrxg56" path="res://assets/player/Walking_Pijama (16 x 16).png" id="16_we0b7"]
 
@@ -126,6 +129,14 @@ region = Rect2(64, 0, 16, 16)
 atlas = ExtResource("3_bls4j")
 region = Rect2(0, 0, 16, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_qsjf6"]
+atlas = ExtResource("9_mtric")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k3n4f"]
+atlas = ExtResource("10_eyb6c")
+region = Rect2(0, 0, 16, 16)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_qwspa"]
 atlas = ExtResource("9_a1qjk")
 region = Rect2(0, 0, 16, 16)
@@ -172,6 +183,30 @@ region = Rect2(64, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g3pa7"]
 atlas = ExtResource("10_7thud")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sgfia"]
+atlas = ExtResource("15_b2kln")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sv458"]
+atlas = ExtResource("15_b2kln")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pth52"]
+atlas = ExtResource("15_b2kln")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4iu2e"]
+atlas = ExtResource("15_b2kln")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0q7bw"]
+atlas = ExtResource("15_b2kln")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qb5t2"]
+atlas = ExtResource("15_b2kln")
 region = Rect2(80, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_24ehl"]
@@ -366,6 +401,22 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_qsjf6")
+}],
+"loop": 1,
+"name": &"jump_hammer",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k3n4f")
+}],
+"loop": 1,
+"name": &"jump_juice",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_qwspa")
 }],
 "loop": 1,
@@ -428,6 +479,29 @@ animations = [{
 }],
 "loop": 1,
 "name": &"walk",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sgfia")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sv458")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pth52")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4iu2e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0q7bw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qb5t2")
+}],
+"loop": 1,
+"name": &"walk_hammer",
 "speed": 10.0
 }, {
 "frames": [{
@@ -508,9 +582,8 @@ script = ExtResource("1_wr5hl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=825959208]
 sprite_frames = SubResource("SpriteFrames_lnu2h")
-animation = &"use_hammer"
+animation = &"jump_juice"
 autoplay = "idle"
-frame_progress = 0.3163957
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=661443857]
 visible = false
