@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d233rvyx64hw4"]
 
 [ext_resource type="Script" uid="uid://tuuewfg8r0x3" path="res://entities/player/player.gd" id="1_wr5hl"]
+[ext_resource type="Texture2D" uid="uid://c671qgvy8iudr" path="res://assets/player/Attack_Hammer(16 x 16).png" id="2_7thud"]
 [ext_resource type="Texture2D" uid="uid://5mboahntf8m1" path="res://assets/player/Idle (16 x 16).png" id="2_abrql"]
 [ext_resource type="Texture2D" uid="uid://yioxxb4xlhev" path="res://assets/player/Hurt (16 x 16).png" id="2_fkugw"]
 [ext_resource type="Texture2D" uid="uid://nqgil0bym46k" path="res://assets/player/Jump (16 x 16).png" id="3_bls4j"]
@@ -8,7 +9,28 @@
 [ext_resource type="Texture2D" uid="uid://cwwuapdjnidl8" path="res://assets/player/Idle_Hammer (16 x 16).png" id="4_8fjmc"]
 [ext_resource type="Texture2D" uid="uid://c64x50tnl0ur7" path="res://assets/player/Idle_Juice (16 x 16).png" id="5_qiwj3"]
 [ext_resource type="Texture2D" uid="uid://d3xa5ojy04qr8" path="res://assets/player/Idle_Pijama (16 x 16).png" id="6_26q78"]
+[ext_resource type="Texture2D" uid="uid://bwwmy8812b02r" path="res://assets/player/Jump_Pijama (16 x 16).png" id="9_a1qjk"]
 [ext_resource type="Texture2D" uid="uid://fcw4yf5kjs4" path="res://assets/player/Waddling_Pijama (16 x 16).png" id="9_bectd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0eo6o"]
+atlas = ExtResource("2_7thud")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ttr27"]
+atlas = ExtResource("2_7thud")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_13wue"]
+atlas = ExtResource("2_7thud")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wy7bt"]
+atlas = ExtResource("2_7thud")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_geky7"]
+atlas = ExtResource("2_7thud")
+region = Rect2(64, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_afbqv"]
 atlas = ExtResource("2_fkugw")
@@ -98,6 +120,10 @@ region = Rect2(64, 0, 16, 16)
 atlas = ExtResource("3_bls4j")
 region = Rect2(0, 0, 16, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_qwspa"]
+atlas = ExtResource("9_a1qjk")
+region = Rect2(0, 0, 16, 16)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_qiwj3"]
 atlas = ExtResource("3_sglur")
 region = Rect2(0, 0, 16, 16)
@@ -148,6 +174,26 @@ region = Rect2(80, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lnu2h"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0eo6o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ttr27")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_13wue")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wy7bt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_geky7")
+}],
+"loop": 1,
+"name": &"attack_hammer",
+"speed": 17.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_afbqv")
@@ -246,6 +292,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_qwspa")
+}],
+"loop": 1,
+"name": &"jump_pijama",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_qiwj3")
 }, {
 "duration": 1.0,
@@ -299,9 +353,9 @@ script = ExtResource("1_wr5hl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=825959208]
 sprite_frames = SubResource("SpriteFrames_lnu2h")
-animation = &"walk_pijama"
+animation = &"attack_hammer"
 autoplay = "idle"
-frame_progress = 0.4368771
+frame_progress = 0.21164924
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=661443857]
 visible = false
