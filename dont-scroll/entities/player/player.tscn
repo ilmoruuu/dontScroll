@@ -138,6 +138,7 @@ position = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_k80x8")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1068141356]
+z_index = 1
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=841866677]
 visible = false

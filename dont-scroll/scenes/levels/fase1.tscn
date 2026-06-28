@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bslxjob44kog8" path="res://assets/tilesets/tile.png" id="6_745wh"]
 [ext_resource type="Texture2D" uid="uid://665p2ayilrxh" path="res://assets/tilesets/tilset2.png" id="7_4bc74"]
 [ext_resource type="PackedScene" uid="uid://ddhxcu8xpmlwj" path="res://scenes/levels/killzone.tscn" id="8_mffd4"]
+[ext_resource type="PackedScene" uid="uid://b85sosryqw0xk" path="res://entities/bench/bench.tscn" id="10_8uqc6"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_4bc74"]
 
@@ -63,6 +64,7 @@ max_value = 88.4
 target = NodePath("../../Player")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1390131299]
+z_index = -1
 custom_minimum_size = Vector2(40, 0)
 anchors_preset = -1
 offset_left = -589.0
@@ -132,3 +134,6 @@ position = Vector2(264, 273)
 [node name="Killzone2" parent="." unique_id=753596741 instance=ExtResource("8_mffd4")]
 visible = false
 position = Vector2(550, 273)
+
+[node name="Bench" parent="." unique_id=746857454 instance=ExtResource("10_8uqc6")]
+position = Vector2(-53, 149)

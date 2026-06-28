@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://teslumdgcgy6"]
+
+[ext_resource type="Script" uid="uid://c74gyv4u57kn4" path="res://entities/bench/prompt.gd" id="1_1yaun"]
+[ext_resource type="Texture2D" uid="uid://dtwbh4s2p6m4e" path="res://assets/bench/f-button.png" id="2_0wh0h"]
+
+[node name="Prompt" type="Node2D" unique_id=906823716]
+script = ExtResource("1_1yaun")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=211505302]
+z_index = 10
+texture = ExtResource("2_0wh0h")
