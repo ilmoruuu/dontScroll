@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://qtm2nlqomd3g"]
 
-[ext_resource type="Texture2D" uid="uid://duv5rg6xyfiko" path="res://assets/enemies/zapi.png" id="1_u22op"]
+[ext_resource type="Texture2D" uid="uid://duv5rg6xyfiko" path="res://assets/enemies/idle/zapi.png" id="1_u22op"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jqp7e"]
 radius = 13.0

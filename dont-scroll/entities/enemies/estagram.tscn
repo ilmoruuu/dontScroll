@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://wvwtw3mekkrb"]
 
-[ext_resource type="Texture2D" uid="uid://b5cciutesjmpg" path="res://assets/enemies/estagram.png" id="1_0bfnc"]
+[ext_resource type="Texture2D" uid="uid://b5cciutesjmpg" path="res://assets/enemies/idle/estagram.png" id="1_0bfnc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jqp7e"]
 size = Vector2(14, 17)

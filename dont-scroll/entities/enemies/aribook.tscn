@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dk85fxcwyw8nw"]
 
-[ext_resource type="Texture2D" uid="uid://ni6x0evw3wb5" path="res://assets/enemies/aribook.png" id="1_46efw"]
+[ext_resource type="Texture2D" uid="uid://ni6x0evw3wb5" path="res://assets/enemies/idle/aribook.png" id="1_46efw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jqp7e"]
 size = Vector2(4, 4)

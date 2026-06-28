@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5yjs6xbur8bu"
-path="res://.godot/imported/iutuba.png-9acc226ec06a32782c187755f333a9d5.ctex"
+uid="uid://bp4iwa2fcgcif"
+path="res://.godot/imported/zapi_down.png-ca404953f97887cb28c92ce28dc1528f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/enemies/iutuba.png"
-dest_files=["res://.godot/imported/iutuba.png-9acc226ec06a32782c187755f333a9d5.ctex"]
+source_file="res://assets/enemies/down/zapi_down.png"
+dest_files=["res://.godot/imported/zapi_down.png-ca404953f97887cb28c92ce28dc1528f.ctex"]
 
 [params]
 

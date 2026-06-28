@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ni6x0evw3wb5"
-path="res://.godot/imported/aribook.png-263af03fa1c66e4aa5600760f184dcc4.ctex"
+uid="uid://cp2iqnc57f5b5"
+path="res://.godot/imported/iutuba_down.png-38fd71057782c009317e47ac01ff4bbb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/enemies/aribook.png"
-dest_files=["res://.godot/imported/aribook.png-263af03fa1c66e4aa5600760f184dcc4.ctex"]
+source_file="res://assets/enemies/down/iutuba_down.png"
+dest_files=["res://.godot/imported/iutuba_down.png-38fd71057782c009317e47ac01ff4bbb.ctex"]
 
 [params]
 

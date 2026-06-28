@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5cciutesjmpg"
-path="res://.godot/imported/estagram.png-9a6515d2d846061e83d03233356ecbe7.ctex"
+uid="uid://47unc5bpkjuc"
+path="res://.godot/imported/estagram_dano.png-d30a5501c3380262dd5a288b147ace79.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/enemies/estagram.png"
-dest_files=["res://.godot/imported/estagram.png-9a6515d2d846061e83d03233356ecbe7.ctex"]
+source_file="res://assets/enemies/dano/estagram_dano.png"
+dest_files=["res://.godot/imported/estagram_dano.png-d30a5501c3380262dd5a288b147ace79.ctex"]
 
 [params]
 

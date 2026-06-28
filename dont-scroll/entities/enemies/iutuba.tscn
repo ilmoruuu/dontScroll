@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c2a8len2vs3wb"]
 
-[ext_resource type="Texture2D" uid="uid://c5yjs6xbur8bu" path="res://assets/enemies/iutuba.png" id="1_18cw2"]
+[ext_resource type="Texture2D" uid="uid://c5yjs6xbur8bu" path="res://assets/enemies/idle/iutuba.png" id="1_18cw2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qdcf5"]
 radius = 15.0
