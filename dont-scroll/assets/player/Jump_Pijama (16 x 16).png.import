@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqlpm7ecqqbne"
-path="res://.godot/imported/Waddling (16 x 16).png-72014ec3f565ad634f3d40bec476801a.ctex"
+uid="uid://bwwmy8812b02r"
+path="res://.godot/imported/Jump_Pijama (16 x 16).png-03629a1b3998c8495f9405463088d8c9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/player/Waddling (16 x 16).png"
-dest_files=["res://.godot/imported/Waddling (16 x 16).png-72014ec3f565ad634f3d40bec476801a.ctex"]
+source_file="res://assets/player/Jump_Pijama (16 x 16).png"
+dest_files=["res://.godot/imported/Jump_Pijama (16 x 16).png-03629a1b3998c8495f9405463088d8c9.ctex"]
 
 [params]
 
