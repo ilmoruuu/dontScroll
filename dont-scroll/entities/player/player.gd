@@ -87,10 +87,10 @@ func use_item():
 		PowerUpState.STANDARD:
 			is_using_item = false
 		PowerUpState.HAMMER:
-			animation.play("attack_hammer")
+			animation.play("use_hammer")
 			hammer_hitbox.set_deferred("disabled", false)
 		PowerUpState.JUICE:
-			animation.play("drink_juice")
+			animation.play("use_juice")
 			await get_tree().create_timer(0.5).timeout
 			is_using_item = false
 			alter_state(PowerUpState.STANDARD)

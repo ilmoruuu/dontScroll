@@ -21,18 +21,6 @@
 [ext_resource type="Texture2D" uid="uid://duh74110uugr5" path="res://assets/player/Walking_Vertigo (16 x 16).png" id="16_b2kln"]
 [ext_resource type="Texture2D" uid="uid://dkfksggsrxg56" path="res://assets/player/Walking_Pijama (16 x 16).png" id="16_we0b7"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0eo6o"]
-atlas = ExtResource("2_7thud")
-region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ttr27"]
-atlas = ExtResource("2_7thud")
-region = Rect2(16, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7otdo"]
-atlas = ExtResource("3_a1qjk")
-region = Rect2(0, 0, 16, 16)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_afbqv"]
 atlas = ExtResource("2_fkugw")
 region = Rect2(0, 0, 16, 16)
@@ -155,6 +143,18 @@ region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rtlkk"]
 atlas = ExtResource("12_3wlsy")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0eo6o"]
+atlas = ExtResource("2_7thud")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ttr27"]
+atlas = ExtResource("2_7thud")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7otdo"]
+atlas = ExtResource("3_a1qjk")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_13wue"]
@@ -283,25 +283,6 @@ region = Rect2(80, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lnu2h"]
 animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0eo6o")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ttr27")
-}],
-"loop": 0,
-"name": &"attack_hammer",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7otdo")
-}],
-"loop": 1,
-"name": &"drink_juice",
-"speed": 5.0
-}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_afbqv")
@@ -457,7 +438,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ttr27")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"use_hammer",
 "speed": 10.0
 }, {
@@ -604,7 +585,7 @@ script = ExtResource("1_wr5hl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=825959208]
 sprite_frames = SubResource("SpriteFrames_lnu2h")
-animation = &"jump_juice"
+animation = &"use_pijama"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=661443857]
@@ -626,7 +607,6 @@ color = Color(0.70035434, 0.0039975718, 0.27824256, 1)
 [node name="hammer_hitbox" type="Area2D" parent="." unique_id=2082669739]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hammer_hitbox" unique_id=1757722576]
-position = Vector2(3, 0.5625)
 shape = SubResource("RectangleShape2D_a8ku5")
 disabled = true
 
