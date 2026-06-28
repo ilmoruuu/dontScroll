@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bp6hb7lqof3xo" path="res://assets/PUs/Suco de Maracujá finalizado(1).png" id="2_5ad7a"]
 [ext_resource type="Script" uid="uid://dgwru07ikjtk3" path="res://entities/PUs/PU_juice.gd" id="2_de5g1"]
 
-[node name="PU_base" unique_id=808263721 instance=ExtResource("1_1icrc")]
+[node name="PU_juice" unique_id=808263721 instance=ExtResource("1_1icrc")]
 script = ExtResource("2_de5g1")
 
 [node name="Sprite2D" parent="." index="0" unique_id=1849485892]

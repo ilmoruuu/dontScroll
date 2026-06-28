@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://7s8s6vheby2f" path="res://assets/PUs/Touca finalizada(1).png" id="2_ep7oq"]
 [ext_resource type="Script" uid="uid://8hcs1qesn4o6" path="res://entities/PUs/PU_cap_and_pillow.gd" id="2_yhj36"]
 
-[node name="PU_base" unique_id=808263721 instance=ExtResource("1_26120")]
+[node name="PU_pijama" unique_id=808263721 instance=ExtResource("1_26120")]
 script = ExtResource("2_yhj36")
 
 [node name="Sprite2D" parent="." index="0" unique_id=1849485892]

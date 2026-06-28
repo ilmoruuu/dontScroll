@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://c64x50tnl0ur7" path="res://assets/player/Idle_Juice (16 x 16).png" id="5_qiwj3"]
 [ext_resource type="Texture2D" uid="uid://d3xa5ojy04qr8" path="res://assets/player/Idle_Pijama (16 x 16).png" id="6_26q78"]
 [ext_resource type="Texture2D" uid="uid://bwwmy8812b02r" path="res://assets/player/Jump_Pijama (16 x 16).png" id="9_a1qjk"]
-[ext_resource type="Texture2D" uid="uid://fcw4yf5kjs4" path="res://assets/player/Waddling_Pijama (16 x 16).png" id="9_bectd"]
+[ext_resource type="Texture2D" uid="uid://fcw4yf5kjs4" path="res://assets/player/Walking_Pijama (16 x 16).png" id="9_bectd"]
 [ext_resource type="Texture2D" uid="uid://dewcw5vv7wwtw" path="res://assets/player/Walking (16 x 16).png" id="10_7thud"]
 [ext_resource type="Texture2D" uid="uid://g5lftksj7x4u" path="res://assets/player/Use_Pijama (16 x 16).png" id="11_j3ovn"]
 
@@ -179,7 +179,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ttr27")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"attack_hammer",
 "speed": 10.0
 }, {
@@ -353,6 +353,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k80x8"]
 size = Vector2(15, 15)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a8ku5"]
+size = Vector2(14, 14.875)
+
 [node name="Player" type="CharacterBody2D" unique_id=105345503]
 script = ExtResource("1_wr5hl")
 
@@ -360,7 +363,6 @@ script = ExtResource("1_wr5hl")
 sprite_frames = SubResource("SpriteFrames_lnu2h")
 animation = &"attack_hammer"
 autoplay = "idle"
-frame_progress = 0.8972105
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=661443857]
 visible = false
@@ -377,3 +379,12 @@ offset_top = -10.0
 offset_right = 10.0
 offset_bottom = 10.0
 color = Color(0.70035434, 0.0039975718, 0.27824256, 1)
+
+[node name="hammer_hitbox" type="Area2D" parent="." unique_id=2082669739]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hammer_hitbox" unique_id=1757722576]
+position = Vector2(3, 0.5625)
+shape = SubResource("RectangleShape2D_a8ku5")
+disabled = true
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
