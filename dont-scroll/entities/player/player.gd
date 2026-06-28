@@ -14,11 +14,12 @@ var sitting := false
 var current_state = PowerUpState.STANDARD
 var sufix = ""
 var is_using_item = false
+var isDialogActive = false
 
 func _process(delta):
 	if sitting:
 		GameManager.bem_reduce(EXPOSURE_DECAY_ON_BENCH * delta)
-		if Input.is_action_just_pressed("ui_left") \
+		if not isDialogActive and Input.is_action_just_pressed("ui_left") \
 		or Input.is_action_just_pressed("ui_right") \
 		or Input.is_action_just_pressed("ui_accept"):
 			stand_up()
@@ -63,8 +64,18 @@ func _physics_process(delta: float) -> void:
 
 func sit_on_bench(bench):
 	sitting = true
+	isDialogActive = true
 	global_position = bench.get_node("SeatPosition").global_position
 	velocity = Vector2.ZERO
+
+func end_dialog():
+	isDialogActive = false
+
+func stand_up():
+	if sitting and not isDialogActive:
+		AudioManager.exit_bench()
+		sitting = false
+		global_position.y -= 8
 
 func use_item():
 	if is_using_item:
@@ -100,11 +111,6 @@ func alter_state(new_state: PowerUpState):
 			sufix = "_juice"
 		PowerUpState.PIJAMA:
 			sufix = "_pijama"
-
-func stand_up():
-	AudioManager.exit_bench()
-	sitting = false
-	global_position.y -= 8
 
 func _on_animated_sprite_2d_animation_finished() -> void:
 	if animation.animation == "attack_hammer":

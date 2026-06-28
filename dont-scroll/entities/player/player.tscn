@@ -10,9 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://c64x50tnl0ur7" path="res://assets/player/Idle_Juice (16 x 16).png" id="5_qiwj3"]
 [ext_resource type="Texture2D" uid="uid://d3xa5ojy04qr8" path="res://assets/player/Idle_Pijama (16 x 16).png" id="6_26q78"]
 [ext_resource type="Texture2D" uid="uid://bwwmy8812b02r" path="res://assets/player/Jump_Pijama (16 x 16).png" id="9_a1qjk"]
-[ext_resource type="Texture2D" uid="uid://fcw4yf5kjs4" path="res://assets/player/Walking_Pijama (16 x 16).png" id="9_bectd"]
 [ext_resource type="Texture2D" uid="uid://bhoe5wgqpb6v8" path="res://assets/player/Jump_Hammer (16 x 16).png" id="9_mtric"]
-[ext_resource type="Texture2D" uid="uid://dkx2lx1f01sin" path="res://assets/player/Idle_Vertigo (16 x 16).png" id="9_yqrof"]
+[ext_resource type="Texture2D" uid="uid://j5dlmy47gbgx" path="res://assets/player/Idle_Vertigo (16 x 16).png" id="9_yqrof"]
 [ext_resource type="Texture2D" uid="uid://dewcw5vv7wwtw" path="res://assets/player/Walking (16 x 16).png" id="10_7thud"]
 [ext_resource type="Texture2D" uid="uid://dhaw0iuw2qanw" path="res://assets/player/Jump_Juice (16 x 16).png" id="10_eyb6c"]
 [ext_resource type="Texture2D" uid="uid://g5lftksj7x4u" path="res://assets/player/Use_Pijama (16 x 16).png" id="11_j3ovn"]
@@ -21,6 +20,18 @@
 [ext_resource type="Texture2D" uid="uid://chhn1spiqesj3" path="res://assets/player/Walking_Hammer (16 x 16).png" id="15_b2kln"]
 [ext_resource type="Texture2D" uid="uid://duh74110uugr5" path="res://assets/player/Walking_Vertigo (16 x 16).png" id="16_b2kln"]
 [ext_resource type="Texture2D" uid="uid://dkfksggsrxg56" path="res://assets/player/Walking_Pijama (16 x 16).png" id="16_we0b7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0eo6o"]
+atlas = ExtResource("2_7thud")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ttr27"]
+atlas = ExtResource("2_7thud")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7otdo"]
+atlas = ExtResource("3_a1qjk")
+region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_afbqv"]
 atlas = ExtResource("2_fkugw")
@@ -144,18 +155,6 @@ region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rtlkk"]
 atlas = ExtResource("12_3wlsy")
-region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0eo6o"]
-atlas = ExtResource("2_7thud")
-region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ttr27"]
-atlas = ExtResource("2_7thud")
-region = Rect2(16, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7otdo"]
-atlas = ExtResource("3_a1qjk")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_13wue"]
