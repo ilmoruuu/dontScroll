@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkfksggsrxg56"
-path="res://.godot/imported/Walking_Pijama (16 x 16).png-ed65f0bfa9e8b071ebd28cf06b1b6cc9.ctex"
+uid="uid://bu8786g5fwrpk"
+path="res://.godot/imported/Jump_Vertigo (16 x 16).png-99d42a91d6ba8509bd9acd24cf29ae98.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/player/Walking_Pijama (16 x 16).png"
-dest_files=["res://.godot/imported/Walking_Pijama (16 x 16).png-ed65f0bfa9e8b071ebd28cf06b1b6cc9.ctex"]
+source_file="res://assets/player/Jump_Vertigo (16 x 16).png"
+dest_files=["res://.godot/imported/Jump_Vertigo (16 x 16).png-99d42a91d6ba8509bd9acd24cf29ae98.ctex"]
 
 [params]
 

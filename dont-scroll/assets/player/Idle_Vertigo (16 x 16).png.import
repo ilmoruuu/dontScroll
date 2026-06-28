@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkfksggsrxg56"
+<<<<<<<< HEAD:dont-scroll/assets/player/Walking_Pijama (16 x 16).png.import
+uid="uid://fcw4yf5kjs4"
 path="res://.godot/imported/Walking_Pijama (16 x 16).png-ed65f0bfa9e8b071ebd28cf06b1b6cc9.ctex"
+========
+uid="uid://dkx2lx1f01sin"
+path="res://.godot/imported/Idle_Vertigo (16 x 16).png-25cd12f0821edc58a26ac89a6364f422.ctex"
+>>>>>>>> origin/docs/player_conditions_animations:dont-scroll/assets/player/Idle_Vertigo (16 x 16).png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<<< HEAD:dont-scroll/assets/player/Walking_Pijama (16 x 16).png.import
 source_file="res://assets/player/Walking_Pijama (16 x 16).png"
 dest_files=["res://.godot/imported/Walking_Pijama (16 x 16).png-ed65f0bfa9e8b071ebd28cf06b1b6cc9.ctex"]
+========
+source_file="res://assets/player/Idle_Vertigo (16 x 16).png"
+dest_files=["res://.godot/imported/Idle_Vertigo (16 x 16).png-25cd12f0821edc58a26ac89a6364f422.ctex"]
+>>>>>>>> origin/docs/player_conditions_animations:dont-scroll/assets/player/Idle_Vertigo (16 x 16).png.import
 
 [params]
 
