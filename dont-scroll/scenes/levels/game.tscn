@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cncjugujpsc2l"]
+[gd_scene format=3 uid="uid://fcjjn11ib5jq"]
 
 [ext_resource type="PackedScene" uid="uid://d233rvyx64hw4" path="res://entities/player/player.tscn" id="1_e6yxx"]
 
@@ -6,7 +6,7 @@
 size = Vector2(1055, 96)
 
 [node name="Game" type="Node2D" unique_id=1267242580]
-position = Vector2(-4, 1)
+position = Vector2(243, 140)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2091756641]
 position = Vector2(362, 63)

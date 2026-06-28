@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://b85sosryqw0xk"]
+
+[ext_resource type="Script" uid="uid://07o07t8g6lgq" path="res://entities/bench/bench.gd" id="1_nadji"]
+[ext_resource type="Texture2D" uid="uid://b85vxssvj57ro" path="res://assets/bench/bench.png" id="1_xcqps"]
+[ext_resource type="PackedScene" uid="uid://teslumdgcgy6" path="res://entities/bench/prompt.tscn" id="2_e22qu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oseuo"]
+
+[node name="Bench" type="Node2D" unique_id=746857454]
+z_index = -1
+script = ExtResource("1_nadji")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1646690704]
+texture = ExtResource("1_xcqps")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=392000771]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2097612474]
+shape = SubResource("RectangleShape2D_oseuo")
+
+[node name="Prompt" parent="." unique_id=906823716 instance=ExtResource("2_e22qu")]
+visible = false
+position = Vector2(0, -33)
+
+[node name="SeatPosition" type="Marker2D" parent="." unique_id=1403736669]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

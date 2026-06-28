@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://cyqngwh0fw0rp"]
+
+[ext_resource type="Script" uid="uid://cwkvvnj13fbn1" path="res://entities/exposition_bar/progress_bar.gd" id="1_b5vg5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m5a1v"]
+bg_color = Color(0.003921569, 0.003921569, 0.003921569, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0hx70"]
+bg_color = Color(1, 0, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+
+[node name="ProgressBar" type="ProgressBar" unique_id=1379656205]
+offset_right = 100.0
+offset_bottom = 15.0
+theme_override_styles/background = SubResource("StyleBoxFlat_m5a1v")
+theme_override_styles/fill = SubResource("StyleBoxFlat_0hx70")
+max_value = 50.0
+show_percentage = false
+script = ExtResource("1_b5vg5")
