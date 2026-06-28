@@ -13,6 +13,7 @@ signal exposition_changed(value)
 
 var _exposition := 0.0
 var sitting := false
+var isDialogActive = false
 
 var expositon: float:
 	get:
@@ -25,7 +26,7 @@ func _process(delta):
 
 	if sitting:
 		expositon = max(0.0, expositon - EXPOSURE_DECAY_ON_BENCH * delta)
-		if Input.is_action_just_pressed("ui_left") \
+		if not isDialogActive and Input.is_action_just_pressed("ui_left") \
 		or Input.is_action_just_pressed("ui_right") \
 		or Input.is_action_just_pressed("ui_accept"):
 
@@ -77,13 +78,16 @@ func _physics_process(delta: float) -> void:
 
 func sit_on_bench(bench):
 	sitting = true
-
+	isDialogActive = true
 	global_position = bench.get_node("SeatPosition").global_position
 
 	velocity = Vector2.ZERO
 
+func end_dialog():
+	isDialogActive = false
 
 func stand_up():
-	AudioManager.exit_bench()
-	sitting = false
-	global_position.y -= 8
+	if sitting and not isDialogActive:
+		AudioManager.exit_bench()
+		sitting = false
+		global_position.y -= 8
