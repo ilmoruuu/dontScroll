@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bn6g385v0dy7k"]
+
+[ext_resource type="Script" uid="uid://ctd06hbho66k0" path="res://scripts/audio_manager.gd" id="1_oa7eb"]
+[ext_resource type="AudioStream" uid="uid://i3aru608m484" path="res://assets/audio/main_waltz_theme.mp3" id="1_pmo2f"]
+[ext_resource type="AudioStream" uid="uid://dgc0x8r7d6utd" path="res://assets/audio/bench_theme.mp3" id="2_oa7eb"]
+[ext_resource type="AudioStream" uid="uid://cs0wryrh1gg24" path="res://assets/audio/death_effect.mp3" id="4_5x08n"]
+
+[node name="AudioManager" type="Node" unique_id=1071734051]
+script = ExtResource("1_oa7eb")
+
+[node name="MainMusic" type="AudioStreamPlayer" parent="." unique_id=1783223809]
+stream = ExtResource("1_pmo2f")
+autoplay = true
+
+[node name="BenchMusic" type="AudioStreamPlayer" parent="." unique_id=639752994]
+stream = ExtResource("2_oa7eb")
+
+[node name="DeathEffect" type="AudioStreamPlayer" parent="." unique_id=624031058]
+stream = ExtResource("4_5x08n")

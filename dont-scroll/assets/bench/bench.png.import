@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqlpm7ecqqbne"
-path="res://.godot/imported/Waddling (16 x 16).png-72014ec3f565ad634f3d40bec476801a.ctex"
+uid="uid://b85vxssvj57ro"
+path="res://.godot/imported/bench.png-f65a8f50a8051e879c6c9d3ece5adf5d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/player/Waddling (16 x 16).png"
-dest_files=["res://.godot/imported/Waddling (16 x 16).png-72014ec3f565ad634f3d40bec476801a.ctex"]
+source_file="res://assets/bench/bench.png"
+dest_files=["res://.godot/imported/bench.png-f65a8f50a8051e879c6c9d3ece5adf5d.ctex"]
 
 [params]
 
