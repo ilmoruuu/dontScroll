@@ -58,13 +58,12 @@ sources/3 = SubResource("TileSetAtlasSource_mffd4")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2013826959]
 
-[node name="ProgressBar" parent="CanvasLayer" unique_id=1379656205 node_paths=PackedStringArray("target") instance=ExtResource("1_f125c")]
+[node name="ProgressBar" parent="CanvasLayer" unique_id=1379656205 instance=ExtResource("1_f125c")]
 offset_left = 16.0
 offset_top = 24.0
 offset_right = 116.0
 offset_bottom = 39.0
 max_value = 88.4
-target = NodePath("../../Player")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1390131299]
 z_index = -1

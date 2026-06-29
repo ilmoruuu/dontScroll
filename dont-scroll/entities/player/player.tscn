@@ -585,7 +585,7 @@ script = ExtResource("1_wr5hl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=825959208]
 sprite_frames = SubResource("SpriteFrames_lnu2h")
-animation = &"use_pijama"
+animation = &"idle"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=661443857]
@@ -605,6 +605,7 @@ offset_bottom = 10.0
 color = Color(0.70035434, 0.0039975718, 0.27824256, 1)
 
 [node name="hammer_hitbox" type="Area2D" parent="." unique_id=2082669739]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hammer_hitbox" unique_id=1757722576]
 shape = SubResource("RectangleShape2D_a8ku5")

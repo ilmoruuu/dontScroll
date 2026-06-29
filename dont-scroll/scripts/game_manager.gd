@@ -3,7 +3,7 @@ extends Node
 # ── BEM (Barra de Exposição Mental) ──────────────────
 var bem: float = 0.0
 var bem_max: float = 100.0
-var bem_rate: float = 2.0
+var bem_rate: float = 3.0
 var player_on_bench: bool = false
 
 # ── Estado do jogador ─────────────────────────────────
