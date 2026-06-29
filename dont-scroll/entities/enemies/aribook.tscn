@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dk85fxcwyw8nw"]
 
 [ext_resource type="Texture2D" uid="uid://ni6x0evw3wb5" path="res://assets/enemies/idle/aribook.png" id="1_46efw"]
+[ext_resource type="Script" uid="uid://bwcs3bcuc0rro" path="res://entities/enemies/enemy.gd" id="1_jgn1o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jqp7e"]
 size = Vector2(4, 4)
@@ -28,15 +29,24 @@ animations = [{
 }]
 
 [node name="aribook" type="CharacterBody2D" unique_id=2017140662]
+position = Vector2(-88, 144)
+script = ExtResource("1_jgn1o")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2136977112]
 position = Vector2(12, 14)
 shape = SubResource("RectangleShape2D_jqp7e")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1859262747]
-position = Vector2(12, 14)
-scale = Vector2(0.28124994, 0.25)
+position = Vector2(-88, 144)
+scale = Vector2(1.124, 1)
 sprite_frames = SubResource("SpriteFrames_jqp7e")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.47750786
+
+[node name="FloorCheck" type="RayCast2D" parent="." unique_id=1739175082]
+position = Vector2(15, 20)
+target_position = Vector2(0, 30)
+
+[node name="WallCheck" type="RayCast2D" parent="." unique_id=1397164340]
+position = Vector2(15, 0)
+target_position = Vector2(25, 0)

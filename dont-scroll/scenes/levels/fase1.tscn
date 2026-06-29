@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://28rqkifmmhr7" path="res://entities/PUs/PU_cap_and_pillow.tscn" id="11_mhm5o"]
 [ext_resource type="PackedScene" uid="uid://cyclxrltpbhhd" path="res://entities/PUs/PU_hammer.tscn" id="12_pvllh"]
 [ext_resource type="PackedScene" uid="uid://ckjmesgeei2jv" path="res://entities/PUs/PU_juice.tscn" id="13_d1ex0"]
+[ext_resource type="PackedScene" uid="uid://dk85fxcwyw8nw" path="res://entities/enemies/aribook.tscn" id="14_h28po"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_4bc74"]
 
@@ -58,13 +59,12 @@ sources/3 = SubResource("TileSetAtlasSource_mffd4")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2013826959]
 
-[node name="ProgressBar" parent="CanvasLayer" unique_id=1379656205 node_paths=PackedStringArray("target") instance=ExtResource("1_f125c")]
+[node name="ProgressBar" parent="CanvasLayer" unique_id=1379656205 instance=ExtResource("1_f125c")]
 offset_left = 16.0
 offset_top = 24.0
 offset_right = 116.0
 offset_bottom = 39.0
 max_value = 88.4
-target = NodePath("../../Player")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1390131299]
 z_index = -1
@@ -152,3 +152,8 @@ position = Vector2(127, 227)
 
 [node name="Juice" parent="." unique_id=1110919637 instance=ExtResource("13_d1ex0")]
 position = Vector2(81, 227)
+
+[node name="Enemies" type="Node2D" parent="." unique_id=302892162]
+
+[node name="aribook" parent="Enemies" unique_id=2017140662 instance=ExtResource("14_h28po")]
+position = Vector2(-27, 7)
