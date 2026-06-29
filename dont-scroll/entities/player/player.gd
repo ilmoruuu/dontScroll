@@ -58,11 +58,14 @@ func update_animation(direction: float):
 		animation.play("jump" + bem_suffix + sufix)
 
 func get_bem_suffix() -> String:
-	match GameManager.get_bem_state():
-		GameManager.BEMState.ANXIOUS, GameManager.BEMState.OVERLOAD:
-			return "_vertigo"
-		_:
-			return ""
+	if not is_using_item:
+		match GameManager.get_bem_state():
+			GameManager.BEMState.ANXIOUS, GameManager.BEMState.OVERLOAD:
+				return "_vertigo"
+			_:
+				return ""
+	else:
+		return ""
 
 func sit_on_bench(bench):
 	sitting = true
