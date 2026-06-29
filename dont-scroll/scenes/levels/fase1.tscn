@@ -14,6 +14,8 @@
 [ext_resource type="PackedScene" uid="uid://cyclxrltpbhhd" path="res://entities/PUs/PU_hammer.tscn" id="12_pvllh"]
 [ext_resource type="PackedScene" uid="uid://ckjmesgeei2jv" path="res://entities/PUs/PU_juice.tscn" id="13_d1ex0"]
 [ext_resource type="PackedScene" uid="uid://dk85fxcwyw8nw" path="res://entities/enemies/aribook.tscn" id="14_h28po"]
+[ext_resource type="PackedScene" uid="uid://wvwtw3mekkrb" path="res://entities/enemies/estagram.tscn" id="15_ymah1"]
+[ext_resource type="Script" uid="uid://bwcs3bcuc0rro" path="res://entities/enemies/enemy.gd" id="16_3u7fm"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_4bc74"]
 
@@ -157,3 +159,7 @@ position = Vector2(81, 227)
 
 [node name="aribook" parent="Enemies" unique_id=2017140662 instance=ExtResource("14_h28po")]
 position = Vector2(-27, 7)
+
+[node name="estagram" parent="Enemies" unique_id=99027874 instance=ExtResource("15_ymah1")]
+position = Vector2(-80, 27)
+script = ExtResource("16_3u7fm")

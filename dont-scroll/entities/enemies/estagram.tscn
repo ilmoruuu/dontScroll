@@ -39,3 +39,9 @@ sprite_frames = SubResource("SpriteFrames_jqp7e")
 animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.3183384
+
+[node name="FloorCheck" type="RayCast2D" parent="." unique_id=783558624]
+position = Vector2(15, 20)
+
+[node name="WallCheck" type="RayCast2D" parent="." unique_id=66268108]
+position = Vector2(15, 0)
