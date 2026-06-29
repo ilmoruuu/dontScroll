@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://bqcqt5hn7281i"]
+
+[ext_resource type="Script" uid="uid://dbs58ghn7u5ad" path="res://scripts/bench_dialogue_ui.gd" id="1_p3kd2"]
+[ext_resource type="Script" uid="uid://d1v60hx2u2jp8" path="res://scripts/events_database.gd" id="2_yds3f"]
+
+[node name="BenchDialogueUI" type="CanvasLayer" unique_id=1641095945]
+script = ExtResource("1_p3kd2")
+
+[node name="Control" type="Control" parent="." unique_id=30650364]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 2.0
+offset_top = 189.0
+offset_right = 42.0
+offset_bottom = 229.0
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=119665338]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.75
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -38.0
+offset_right = 437.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 0.6392157)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/ColorRect" unique_id=952121811]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 470.0
+offset_bottom = 50.0
+
+[node name="VBoxContainer" type="HBoxContainer" parent="." unique_id=1058291314]
+offset_left = 1.0
+offset_top = 226.0
+offset_right = 478.0
+offset_bottom = 266.0
+
+[node name="EventsDatabase" type="Node" parent="." unique_id=750593022]
+script = ExtResource("2_yds3f")
