@@ -5,7 +5,7 @@ extends CharacterBody2D
 
 enum PowerUpState { STANDARD, HAMMER, JUICE, PIJAMA }
 
-const SPEED = 80.0
+const SPEED = 90.0
 const JUMP_VELOCITY = -280.0
 const GRAVITY = 600.0
 const EXPOSURE_DECAY_ON_BENCH = 5.5
@@ -56,16 +56,6 @@ func update_animation(direction: float):
 			animation.play("idle" + bem_suffix + sufix)
 	else:
 		animation.play("jump" + bem_suffix + sufix)
-
-func get_bem_suffix() -> String:
-	if not is_using_item:
-		match GameManager.get_bem_state():
-			GameManager.BEMState.ANXIOUS, GameManager.BEMState.OVERLOAD:
-				return "_vertigo"
-			_:
-				return ""
-	else:
-		return ""
 
 func sit_on_bench(bench):
 	sitting = true
@@ -121,3 +111,13 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 	if animation.animation == "use_hammer":
 		is_using_item = false
 		hammer_hitbox.set_deferred("disabled", true)
+
+func get_bem_suffix() -> String:
+	if current_state != PowerUpState.STANDARD:
+		return ""
+
+	match GameManager.get_bem_state():
+		GameManager.BEMState.ANXIOUS, GameManager.BEMState.OVERLOAD:
+			return "_vertigo"
+		_:
+			return ""
