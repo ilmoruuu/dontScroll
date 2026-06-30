@@ -6,6 +6,14 @@ var player_near = false
 var player_ref = null
 var dialog = false
 
+## Create functions from minigames here fellas! 
+func start_cat_minigame():
+	var scene = preload("res://minigames/CatMinigame.tscn")
+	var game = scene.instantiate()
+
+	get_tree().current_scene.add_child(game)
+
+	game.start(self)
 func _on_area_2d_body_entered(body):
 	player_near = true
 	player_ref = body
@@ -23,11 +31,14 @@ func _process(_delta):
 func start_bench_dialog():
 	dialog = true
 	prompt.visible = false
-	
+
 	AudioManager.enter_bench()
-	
-	BenchDialogueUI.start_random_event(self) 
-	
+
+	if randf() <= 0.5:
+		start_cat_minigame()
+	else:
+		BenchDialogueUI.start_random_event(self)
+
 	if player_ref and player_ref.has_method("sit_on_bench"):
 		player_ref.sit_on_bench(self)
 
