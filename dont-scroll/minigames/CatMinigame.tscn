@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://c2x6prpltng1x"]
+
+[ext_resource type="Texture2D" uid="uid://phwl1k8n3wbj" path="res://assets/minigame_cat/maxwell.png" id="1_613xq"]
+[ext_resource type="Script" uid="uid://0jqbmqak1hvw" path="res://minigames/cat_minigame.gd" id="1_c24uh"]
+[ext_resource type="AudioStream" uid="uid://llpowajht2nk" path="res://assets/audio/purr_effect.mp3" id="3_236un"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c24uh"]
+bg_color = Color(0.004019165, 0.004019165, 0.004019165, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_236un"]
+bg_color = Color(0, 0.8792148, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+
+[node name="CatMinigame" type="CanvasLayer" unique_id=1498849347]
+script = ExtResource("1_c24uh")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1549693965]
+offset_left = 90.0
+offset_top = 38.0
+offset_right = 411.0
+offset_bottom = 232.0
+color = Color(0, 0, 0, 1)
+
+[node name="Control" type="Control" parent="." unique_id=597885966]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 91.0
+offset_top = 41.0
+offset_right = 412.0
+offset_bottom = 236.0
+
+[node name="Panel" type="Panel" parent="Control" unique_id=286562537]
+layout_mode = 0
+offset_top = -2.0
+offset_right = 321.0
+offset_bottom = 193.0
+
+[node name="Label" type="Label" parent="Control/Panel" unique_id=1597710626]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 3.0
+offset_right = 364.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 10
+text = "Faça carinho no gato!
+Passe o mouse sobre ele várias vezes para relaxar sua mente!"
+
+[node name="TextureRect" type="TextureRect" parent="Control/Panel" unique_id=148529347]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 18.0
+offset_right = 269.0
+offset_bottom = 185.0
+texture = ExtResource("1_613xq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ProgressBar" type="ProgressBar" parent="Control/Panel" unique_id=1810575937]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 161.0
+offset_right = 257.0
+offset_bottom = 177.0
+offset_transform_enabled = true
+theme_override_styles/background = SubResource("StyleBoxFlat_c24uh")
+theme_override_styles/fill = SubResource("StyleBoxFlat_236un")
+show_percentage = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control" unique_id=1682204756]
+stream = ExtResource("3_236un")
