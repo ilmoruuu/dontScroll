@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://cclqnqdp6u8mq"]
+
+[ext_resource type="Texture2D" uid="uid://cnjo5jxyfnfo6" path="res://assets/minigame_garden/agua.png" id="1_xi4sn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_onyrs"]
+atlas = ExtResource("1_xi4sn")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fql6l"]
+atlas = ExtResource("1_xi4sn")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_84kqj"]
+atlas = ExtResource("1_xi4sn")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2xfej"]
+atlas = ExtResource("1_xi4sn")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a8ku5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_onyrs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fql6l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_84kqj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2xfej")
+}],
+"loop": 1,
+"name": &"falling_water",
+"speed": 5.0
+}]
+
+[node name="Water" type="Node2D" unique_id=435112593]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1521785156]
+visible = false
+sprite_frames = SubResource("SpriteFrames_a8ku5")
+animation = &"falling_water"
+frame_progress = 0.09100995

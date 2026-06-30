@@ -16,6 +16,7 @@ texture = ExtResource("1_xcqps")
 [node name="Area2D" type="Area2D" parent="." unique_id=392000771]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2097612474]
+visible = false
 shape = SubResource("RectangleShape2D_oseuo")
 
 [node name="Prompt" parent="." unique_id=906823716 instance=ExtResource("2_e22qu")]

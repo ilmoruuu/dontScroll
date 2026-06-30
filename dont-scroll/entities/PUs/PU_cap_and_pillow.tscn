@@ -10,3 +10,6 @@ script = ExtResource("2_yhj36")
 [node name="Sprite2D" parent="." index="0" unique_id=1849485892]
 scale = Vector2(0.616875, 0.59375)
 texture = ExtResource("2_ep7oq")
+
+[node name="CollisionShape2D" parent="Area2D" parent_id_path=PackedInt32Array(413166140) index="0" unique_id=1142963009]
+visible = false
