@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c5yjs6xbur8bu" path="res://assets/enemies/idle/iutuba.png" id="1_18cw2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qdcf5"]
-radius = 15.0
+radius = 9.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bs6bc"]
 atlas = ExtResource("1_18cw2")
@@ -35,8 +35,8 @@ position = Vector2(60, 82)
 shape = SubResource("CircleShape2D_qdcf5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=472565783]
-position = Vector2(60, 80)
-scale = Vector2(1.9375, 2)
+position = Vector2(60, 81)
+scale = Vector2(1.124, 1.16)
 sprite_frames = SubResource("SpriteFrames_jqp7e")
 animation = &"idle"
 autoplay = "idle"

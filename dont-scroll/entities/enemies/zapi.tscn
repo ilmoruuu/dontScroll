@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://duv5rg6xyfiko" path="res://assets/enemies/idle/zapi.png" id="1_u22op"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jqp7e"]
-radius = 13.0
+radius = 8.889104
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_45y0w"]
 atlas = ExtResource("1_u22op")
@@ -30,12 +30,12 @@ animations = [{
 [node name="zapi" type="CharacterBody2D" unique_id=132603691]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=856646484]
-position = Vector2(233.12497, 136.5)
+position = Vector2(232, 139)
 shape = SubResource("CircleShape2D_jqp7e")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=569704916]
 position = Vector2(231.125, 138.5)
-scale = Vector2(1.8906262, 1.937501)
+scale = Vector2(0.976, 1)
 sprite_frames = SubResource("SpriteFrames_jqp7e")
 animation = &"idle"
 autoplay = "idle"

@@ -3,8 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://ni6x0evw3wb5" path="res://assets/enemies/idle/aribook.png" id="1_46efw"]
 [ext_resource type="Script" uid="uid://bwcs3bcuc0rro" path="res://entities/enemies/enemy.gd" id="1_jgn1o"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jqp7e"]
-size = Vector2(4, 4)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jgn1o"]
+size = Vector2(14, 15)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jgn1o"]
 atlas = ExtResource("1_46efw")
@@ -29,19 +29,19 @@ animations = [{
 }]
 
 [node name="aribook" type="CharacterBody2D" unique_id=2017140662]
-position = Vector2(-88, 144)
 script = ExtResource("1_jgn1o")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2136977112]
-position = Vector2(12, 14)
-shape = SubResource("RectangleShape2D_jqp7e")
+position = Vector2(194, 139.5)
+shape = SubResource("RectangleShape2D_jgn1o")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1859262747]
-position = Vector2(-88, 144)
+position = Vector2(194, 139)
 scale = Vector2(1.124, 1)
 sprite_frames = SubResource("SpriteFrames_jqp7e")
 animation = &"idle"
 autoplay = "idle"
+frame_progress = 0.20094335
 
 [node name="FloorCheck" type="RayCast2D" parent="." unique_id=1739175082]
 position = Vector2(15, 20)

@@ -160,16 +160,16 @@ position = Vector2(81, 227)
 [node name="Enemies" type="Node2D" parent="." unique_id=302892162]
 
 [node name="aribook" parent="Enemies" unique_id=2017140662 instance=ExtResource("14_h28po")]
-position = Vector2(-27, 7)
+position = Vector2(735, 43)
 
 [node name="estagram" parent="Enemies" unique_id=99027874 instance=ExtResource("15_ymah1")]
-position = Vector2(-80, 27)
+position = Vector2(-134, -97)
 script = ExtResource("16_3u7fm")
 
 [node name="iutuba" parent="Enemies" unique_id=270139472 instance=ExtResource("17_fpbt8")]
-position = Vector2(-69, 142)
+position = Vector2(697, 150)
 script = ExtResource("16_3u7fm")
 
 [node name="zapi" parent="Enemies" unique_id=132603691 instance=ExtResource("18_2y8a1")]
-position = Vector2(-374, 1)
+position = Vector2(186, 18)
 script = ExtResource("16_3u7fm")
