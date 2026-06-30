@@ -3,7 +3,7 @@ extends CanvasLayer
 @onready var cat = $Control/Panel/TextureRect
 @onready var progress = $Control/Panel/ProgressBar
 
-var carinho := 0.0
+var petting := 0.0
 var last_mouse := Vector2.ZERO
 var current_bench = null
 
@@ -16,7 +16,7 @@ func start(bench):
 
 	visible = true
 
-	carinho = 0
+	petting = 0
 	progress.value = 0
 
 	last_mouse = get_viewport().get_mouse_position()
@@ -36,16 +36,16 @@ func _process(_delta):
 		var distance = mouse.distance_to(last_mouse)
 
 		if distance > 1:
-			carinho += distance * 0.03
-			carinho = clamp(carinho, 0.0, 100.0)
+			petting += distance * 0.03
+			petting = clamp(petting, 0.0, 100.0)
 
-			progress.value = carinho
+			progress.value = petting
 
 			GameManager.bem_reduce(distance * 0.02)
 
 	last_mouse = mouse
 
-	if carinho >= 100:
+	if petting >= 100:
 		finish_game()
 
 func finish_game():
