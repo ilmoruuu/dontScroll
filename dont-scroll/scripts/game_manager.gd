@@ -67,6 +67,15 @@ func respawn() -> void:
 func _do_respawn() -> void:
 	AudioManager.play_death_effect()
 	get_tree().change_scene_to_file(checkpoint_scene)
+	
+func _ready() -> void:
+	pause_bem()
+
+func pause_bem() -> void:
+	set_process(false)
+
+func resume_bem() -> void:
+	set_process(true)
 
 func game_over() -> void:
 	bem = 60.0

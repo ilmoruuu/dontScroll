@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://b5hogq42fsios"]
 
 [ext_resource type="PackedScene" uid="uid://cyqngwh0fw0rp" path="res://entities/exposition_bar/exposition_bar.tscn" id="1_f125c"]
+[ext_resource type="Script" uid="uid://cmjq4ih77kfx7" path="res://scenes/levels/fase_1.gd" id="1_ymah1"]
 [ext_resource type="PackedScene" uid="uid://d233rvyx64hw4" path="res://entities/player/player.tscn" id="1_yo6j7"]
 [ext_resource type="PackedScene" uid="uid://2ymphgwd4s1q" path="res://entities/platforms/platform.tscn" id="2_051w3"]
 [ext_resource type="PackedScene" uid="uid://cp5omlcb70p3p" path="res://entities/platforms/platformVertical.tscn" id="3_745wh"]
@@ -13,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://28rqkifmmhr7" path="res://entities/PUs/PU_cap_and_pillow.tscn" id="11_mhm5o"]
 [ext_resource type="PackedScene" uid="uid://cyclxrltpbhhd" path="res://entities/PUs/PU_hammer.tscn" id="12_pvllh"]
 [ext_resource type="PackedScene" uid="uid://ckjmesgeei2jv" path="res://entities/PUs/PU_juice.tscn" id="13_d1ex0"]
+[ext_resource type="PackedScene" uid="uid://cn553msgi2tbt" path="res://scenes/ui/effects/VFXLayer.tscn" id="14_h28po"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_4bc74"]
 
@@ -55,16 +57,16 @@ sources/2 = SubResource("TileSetAtlasSource_4bc74")
 sources/3 = SubResource("TileSetAtlasSource_mffd4")
 
 [node name="Fase1" type="Node2D" unique_id=824388027 groups=["platform"]]
+script = ExtResource("1_ymah1")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2013826959]
 
-[node name="ProgressBar" parent="CanvasLayer" unique_id=1379656205 node_paths=PackedStringArray("target") instance=ExtResource("1_f125c")]
+[node name="ProgressBar" parent="CanvasLayer" unique_id=1379656205 instance=ExtResource("1_f125c")]
 offset_left = 16.0
 offset_top = 24.0
 offset_right = 116.0
 offset_bottom = 39.0
 max_value = 88.4
-target = NodePath("../../Player")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1390131299]
 z_index = -1
@@ -76,7 +78,7 @@ offset_right = 3474.0
 offset_bottom = 691.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0.07058824, 1)
+color = Color(0, 0, 0.14509805, 1)
 
 [node name="Player" parent="." unique_id=105345503 groups=["player"] instance=ExtResource("1_yo6j7")]
 position = Vector2(-88, 144)
@@ -152,3 +154,5 @@ position = Vector2(127, 227)
 
 [node name="Juice" parent="." unique_id=1110919637 instance=ExtResource("13_d1ex0")]
 position = Vector2(81, 227)
+
+[node name="VfxLayer" parent="." unique_id=1759710778 instance=ExtResource("14_h28po")]

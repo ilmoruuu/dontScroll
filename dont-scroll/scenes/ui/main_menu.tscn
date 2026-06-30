@@ -1,21 +1,24 @@
 [gd_scene format=3 uid="uid://o4msmqv42yb5"]
 
 [ext_resource type="Script" uid="uid://c00xh2rhddchr" path="res://scenes/ui/main_menu.gd" id="1_sl1te"]
-[ext_resource type="Shader" uid="uid://df1dsffjyq8mf" path="res://scenes/ui/crt.gdshader" id="2_fe2o3"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_1g8jr"]
-shader = ExtResource("2_fe2o3")
-shader_parameter/glitch_intensity = 0.3
-shader_parameter/scan_line_amount = 0.3
-shader_parameter/vignette_intensity = 0.5
-shader_parameter/time_scale = 2.0
-shader_parameter/glitch_spike = 0.0
+[ext_resource type="Texture2D" uid="uid://b5lou53ktrop7" path="res://assets/dontScrollLogo.png" id="2_1g8jr"]
+[ext_resource type="Shader" uid="uid://b2l32acnshxbp" path="res://scenes/ui/effects/grayscale.gdshader" id="2_fe2o3"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8uqc6"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mhm5o"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d1ex0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1g8jr"]
+shader = ExtResource("2_fe2o3")
+shader_parameter/gray_intensity = 0.0
+shader_parameter/glitch_intensity = 0.3
+shader_parameter/glitch_spike = 0.0
+shader_parameter/scan_line_amount = 0.3
+shader_parameter/vignette_intensity = 0.5
+shader_parameter/noise_amount = 0.03
+shader_parameter/time_scale = 2.0
 
 [node name="MainMenu" type="Control" unique_id=1407405502]
 layout_mode = 3
@@ -28,27 +31,18 @@ script = ExtResource("1_sl1te")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=551589126]
 layout_mode = 0
-offset_left = -4.0
-offset_right = 476.0
+offset_right = 480.0
 offset_bottom = 270.0
 color = Color(0.050980393, 0.050980393, 0.101960786, 1)
 
-[node name="CRTOverlay" type="ColorRect" parent="." unique_id=1837884053]
-material = SubResource("ShaderMaterial_1g8jr")
+[node name="Label" type="TextureRect" parent="." unique_id=68697401]
 layout_mode = 0
-offset_left = -4.0
-offset_right = 477.0
-offset_bottom = 284.0
-color = Color(0.0017164962, 0.0031229265, 0.0013931241, 0.5568628)
-
-[node name="Label" type="Label" parent="." unique_id=1227312318]
-layout_mode = 0
-offset_left = 181.0
-offset_top = 59.0
-offset_right = 299.0
-offset_bottom = 93.0
-theme_override_font_sizes/font_size = 24
-text = "dontScroll"
+offset_left = 128.0
+offset_top = 62.0
+offset_right = 583.0
+offset_bottom = 127.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_1g8jr")
 
 [node name="Label2" type="Label" parent="." unique_id=1572657192]
 layout_mode = 0
@@ -70,15 +64,27 @@ alignment = 1
 
 [node name="ButtonIniciar" type="Button" parent="VBoxContainer" unique_id=1692528362]
 layout_mode = 2
+theme_override_font_sizes/font_size = 13
 theme_override_styles/normal = SubResource("StyleBoxEmpty_8uqc6")
 text = "INICIAR"
 
 [node name="ButtonOpções" type="Button" parent="VBoxContainer" unique_id=1005872165]
 layout_mode = 2
+theme_override_font_sizes/font_size = 13
 theme_override_styles/normal = SubResource("StyleBoxEmpty_mhm5o")
 text = "OPÇÕES"
 
 [node name="ButtonSair" type="Button" parent="VBoxContainer" unique_id=2059410320]
 layout_mode = 2
+theme_override_font_sizes/font_size = 13
 theme_override_styles/normal = SubResource("StyleBoxEmpty_d1ex0")
 text = "SAIR"
+
+[node name="CRTOverlay" type="ColorRect" parent="." unique_id=1837884053]
+material = SubResource("ShaderMaterial_1g8jr")
+layout_mode = 0
+offset_left = -1.0
+offset_top = -9.0
+offset_right = 480.0
+offset_bottom = 275.0
+color = Color(0, 0.003921569, 0, 0.11372549)
