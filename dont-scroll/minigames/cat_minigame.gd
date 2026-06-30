@@ -2,6 +2,7 @@ extends CanvasLayer
 
 @onready var cat = $Control/Panel/TextureRect
 @onready var progress = $Control/Panel/ProgressBar
+@onready var purr_effect = $Control/AudioStreamPlayer
 
 var petting := 0.0
 var last_mouse := Vector2.ZERO
@@ -36,9 +37,13 @@ func _process(_delta):
 		var distance = mouse.distance_to(last_mouse)
 
 		if distance > 1:
+			
+			if !purr_effect.playing:
+				purr_effect.play()
+			
 			petting += distance * 0.03
 			petting = clamp(petting, 0.0, 100.0)
-
+			
 			progress.value = petting
 
 			GameManager.bem_reduce(distance * 0.02)

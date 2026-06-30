@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://phwl1k8n3wbj" path="res://assets/minigame_cat/maxwell.png" id="1_613xq"]
 [ext_resource type="Script" uid="uid://0jqbmqak1hvw" path="res://minigames/cat_minigame.gd" id="1_c24uh"]
+[ext_resource type="AudioStream" uid="uid://llpowajht2nk" path="res://assets/audio/purr_effect.mp3" id="3_236un"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c24uh"]
 bg_color = Color(0.004019165, 0.004019165, 0.004019165, 1)
@@ -71,3 +72,6 @@ offset_transform_enabled = true
 theme_override_styles/background = SubResource("StyleBoxFlat_c24uh")
 theme_override_styles/fill = SubResource("StyleBoxFlat_236un")
 show_percentage = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control" unique_id=1682204756]
+stream = ExtResource("3_236un")
