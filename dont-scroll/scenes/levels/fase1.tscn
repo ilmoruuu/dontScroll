@@ -11,7 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://ddhxcu8xpmlwj" path="res://scenes/levels/killzone.tscn" id="8_mffd4"]
 [ext_resource type="PackedScene" uid="uid://b85sosryqw0xk" path="res://entities/bench/bench.tscn" id="10_8uqc6"]
 [ext_resource type="PackedScene" uid="uid://28rqkifmmhr7" path="res://entities/PUs/PU_cap_and_pillow.tscn" id="11_mhm5o"]
-[ext_resource type="Script" uid="uid://3nchuj4t37wi" path="res://entities/PUs/pu_hammer.gd" id="12_2y8a1"]
 [ext_resource type="PackedScene" uid="uid://cyclxrltpbhhd" path="res://entities/PUs/PU_hammer.tscn" id="12_pvllh"]
 [ext_resource type="PackedScene" uid="uid://ckjmesgeei2jv" path="res://entities/PUs/PU_juice.tscn" id="13_d1ex0"]
 [ext_resource type="PackedScene" uid="uid://dk85fxcwyw8nw" path="res://entities/enemies/aribook.tscn" id="14_h28po"]
@@ -151,7 +150,6 @@ position = Vector2(-53, 149)
 
 [node name="Hammer" parent="." unique_id=327378327 instance=ExtResource("12_pvllh")]
 position = Vector2(23, 130)
-script = ExtResource("12_2y8a1")
 
 [node name="Pijama" parent="." unique_id=808263721 instance=ExtResource("11_mhm5o")]
 position = Vector2(127, 227)

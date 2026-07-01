@@ -32,6 +32,8 @@ func take_damage():
 		return
 
 	dead = true
+	
+	GameManager.bem_reduce(20.0)
 
 	velocity = Vector2.ZERO
 
