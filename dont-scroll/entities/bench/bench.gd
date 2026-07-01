@@ -8,7 +8,7 @@ var dialog = false
 
 ## Create functions from minigames here fellas! 
 func start_cat_minigame():
-	var scene = preload("res://minigames/CatMinigame.tscn")
+	var scene = preload("res://minigames/cat_minigame/CatMinigame.tscn")
 	var game = scene.instantiate()
 
 	get_tree().current_scene.add_child(game)
@@ -44,15 +44,12 @@ func start_bench_dialog():
 	
 	var randon = randf()
 	
-	start_garden_minigame()
-	
-	"""
 	if randon <= 0.25:
 		start_cat_minigame()
 	elif randon > 0.25 and randon <= 0.5:
 		start_garden_minigame()
 	else:
-		BenchDialogueUI.start_random_event(self)"""
+		BenchDialogueUI.start_random_event(self)
 
 	if player_ref and player_ref.has_method("sit_on_bench"):
 		player_ref.sit_on_bench(self)

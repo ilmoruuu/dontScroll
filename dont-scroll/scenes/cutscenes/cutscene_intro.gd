@@ -1,10 +1,19 @@
 extends CanvasLayer
 
 const SLIDES = [
-	["res://assets/slide1.jpg", "", 2.0],
-	["res://assets/slide2.jpg", "", 2.0],
-	["res://assets/slide3.jpg", "", 2.0],
-	["res://assets/slide4.jpg", "", 2.0],
+	["res://assets/slides/slide1.jpg", "", 2.0],
+	["res://assets/slides/slide2.jpg", "", 2.0],
+	["res://assets/slides/slide3.jpg", "", 2.0],
+	["res://assets/slides/slide4.jpg", "", 2.0],
+	["res://assets/slides/slide5.jpg", "", 2.0],
+	["res://assets/slides/slide6.jpg", "", 2.0],
+	["res://assets/slides/slide7.jpg", "", 2.0],
+	["res://assets/slides/slide8.jpg", "", 2.0],
+	["res://assets/slides/slide9.jpg", "", 2.0],
+	["res://assets/slides/slide10.jpg", "", 2.0],
+	["res://assets/slides/slide11.jpg", "", 2.0],
+	["res://assets/slides/slide12.jpg", "", 2.0],
+	
 ]
 
 var current_slide: int = 0
