@@ -28,10 +28,14 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qdcf5"]
+size = Vector2(13.75, 16.5)
+
 [node name="aribook" type="CharacterBody2D" unique_id=2017140662]
 script = ExtResource("1_jgn1o")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2136977112]
+visible = false
 position = Vector2(194, 139.5)
 shape = SubResource("RectangleShape2D_jgn1o")
 
@@ -50,3 +54,9 @@ target_position = Vector2(0, 30)
 [node name="WallCheck" type="RayCast2D" parent="." unique_id=1397164340]
 position = Vector2(15, 0)
 target_position = Vector2(25, 0)
+
+[node name="HurtBox" type="Area2D" parent="." unique_id=790957694]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=1915363182]
+position = Vector2(194.125, 139.75)
+shape = SubResource("RectangleShape2D_qdcf5")

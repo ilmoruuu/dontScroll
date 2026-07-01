@@ -27,6 +27,8 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_qdcf5"]
+
 [node name="zapi" type="CharacterBody2D" unique_id=132603691]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=856646484]
@@ -46,3 +48,8 @@ position = Vector2(15, 20)
 
 [node name="WallCheck" type="RayCast2D" parent="." unique_id=535124849]
 position = Vector2(15, 0)
+
+[node name="HurtBox" type="Area2D" parent="." unique_id=1964912459]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=391965144]
+shape = SubResource("CircleShape2D_qdcf5")

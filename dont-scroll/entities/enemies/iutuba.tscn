@@ -27,10 +27,13 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_c3pqy"]
+
 [node name="iutuba" type="CharacterBody2D" unique_id=270139472]
 position = Vector2(231, 133)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=200818072]
+visible = false
 position = Vector2(60, 82)
 shape = SubResource("CircleShape2D_qdcf5")
 
@@ -47,3 +50,9 @@ position = Vector2(15, 20)
 
 [node name="WallCheck" type="RayCast2D" parent="." unique_id=748412424]
 position = Vector2(15, 0)
+
+[node name="HurtBox" type="Area2D" parent="." unique_id=1819013970]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=1744930655]
+position = Vector2(60, 82)
+shape = SubResource("CircleShape2D_c3pqy")
