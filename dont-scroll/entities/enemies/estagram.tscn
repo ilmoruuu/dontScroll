@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://b5cciutesjmpg" path="res://assets/enemies/idle/estagram.png" id="1_0bfnc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jqp7e"]
-size = Vector2(14, 17)
+size = Vector2(17, 19)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w5tfi"]
 atlas = ExtResource("1_0bfnc")
@@ -27,10 +27,14 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qdcf5"]
+size = Vector2(16, 17)
+
 [node name="estagram" type="CharacterBody2D" unique_id=99027874]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1548025869]
-position = Vector2(254, 213.5)
+visible = false
+position = Vector2(253.5, 213.5)
 shape = SubResource("RectangleShape2D_jqp7e")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=159725757]
@@ -45,3 +49,9 @@ position = Vector2(15, 20)
 
 [node name="WallCheck" type="RayCast2D" parent="." unique_id=66268108]
 position = Vector2(15, 0)
+
+[node name="HurtBox" type="Area2D" parent="." unique_id=1393668045]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=223434318]
+position = Vector2(254, 214)
+shape = SubResource("RectangleShape2D_qdcf5")
