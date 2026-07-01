@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c2x6prpltng1x"]
 
 [ext_resource type="Texture2D" uid="uid://phwl1k8n3wbj" path="res://assets/minigame_cat/maxwell.png" id="1_613xq"]
-[ext_resource type="Script" uid="uid://0jqbmqak1hvw" path="res://minigames/cat_minigame.gd" id="1_c24uh"]
+[ext_resource type="Script" uid="uid://0jqbmqak1hvw" path="res://minigames/cat_minigame/cat_minigame.gd" id="1_c24uh"]
 [ext_resource type="AudioStream" uid="uid://llpowajht2nk" path="res://assets/audio/purr_effect.mp3" id="3_236un"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c24uh"]
