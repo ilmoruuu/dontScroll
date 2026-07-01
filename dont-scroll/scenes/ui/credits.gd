@@ -1,21 +1,19 @@
 extends Control
 
-@onready var scroll = $ScrollContainer
-@onready var btn_voltar = $ButtonVoltar
+@export var scroll_speed := 40.0
 
-const SCROLL_SPEED = 30.0
+@onready var credits = $RichTextLabel
 
-func _ready() -> void:
-	btn_voltar.pressed.connect(_on_voltar)
-	scroll.scroll_vertical = 0
+func _ready():
+	credits.position.y = get_viewport_rect().size.y
 
-func _process(delta: float) -> void:
-	scroll.scroll_vertical += int(SCROLL_SPEED * delta)
-	
-	# Quando chegar no fim, para
-	var max_scroll = scroll.get_child(0).size.y - scroll.size.y
-	if scroll.scroll_vertical >= max_scroll:
-		scroll.scroll_vertical = max_scroll
+func _process(delta):
+	credits.position.y -= scroll_speed * delta
 
-func _on_voltar() -> void:
-	get_tree().change_scene_to_file("res://scenes/ui/options.tscn")
+	if credits.position.y + credits.get_content_height() < 0:
+		get_tree().change_scene_to_file("res://scenes/ui/main_menu.tscn")
+
+func _unhandled_input(event):
+	if event.is_action_pressed("ui_accept") \
+	or event.is_action_pressed("ui_cancel"):
+		get_tree().change_scene_to_file("res://scenes/ui/main_menu.tscn")
