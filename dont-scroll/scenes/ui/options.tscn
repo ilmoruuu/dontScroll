@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://5gaocbfj84is"]
+
+[ext_resource type="Script" uid="uid://b8ggc5hf1qr5r" path="res://scenes/ui/options.gd" id="1_l4ffv"]
+[ext_resource type="Shader" uid="uid://b2l32acnshxbp" path="res://scenes/ui/effects/grayscale.gdshader" id="1_lr2b1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wby6m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pykmj"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hhwow"]
+shader = ExtResource("1_lr2b1")
+shader_parameter/gray_intensity = 0.0
+shader_parameter/glitch_intensity = 0.3
+shader_parameter/glitch_spike = 0.0
+shader_parameter/scan_line_amount = 0.3
+shader_parameter/vignette_intensity = 0.5
+shader_parameter/noise_amount = 0.03
+shader_parameter/time_scale = 2.0
+
+[node name="Options" type="Control" unique_id=2106137935]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_l4ffv")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=228052423]
+layout_mode = 0
+offset_right = 480.0
+offset_bottom = 270.0
+color = Color(0.050980393, 0.050980393, 0.101960786, 1)
+
+[node name="LabelMusica" type="Label" parent="." unique_id=408104881]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 68.0
+offset_right = 203.0
+offset_bottom = 91.0
+theme_override_font_sizes/font_size = 13
+text = "VOLUME DA MÚSICA:"
+
+[node name="LabelEfeitos" type="Label" parent="." unique_id=1616778141]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 91.0
+offset_right = 204.0
+offset_bottom = 114.0
+theme_override_font_sizes/font_size = 13
+text = "VOLUME DOS EFEITOS:"
+
+[node name="MusicSlider" type="HSlider" parent="." unique_id=1618710382]
+layout_mode = 0
+offset_left = 213.0
+offset_top = 70.0
+offset_right = 402.0
+offset_bottom = 86.0
+
+[node name="EffectSlider" type="HSlider" parent="." unique_id=1028312960]
+layout_mode = 0
+offset_left = 213.0
+offset_top = 94.0
+offset_right = 402.0
+offset_bottom = 110.0
+
+[node name="ButtonTutorial" type="Button" parent="." unique_id=1933993044]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 123.0
+offset_right = 449.0
+offset_bottom = 141.0
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wby6m")
+text = "TUTORIAL"
+
+[node name="ButtonCredits" type="Button" parent="." unique_id=352942175]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 152.0
+offset_right = 449.0
+offset_bottom = 170.0
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wby6m")
+text = "CRÉDITOS"
+
+[node name="ButtonVoltar" type="Button" parent="." unique_id=1651519845]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 181.0
+offset_right = 449.0
+offset_bottom = 199.0
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleBoxEmpty_pykmj")
+text = "VOLTAR
+"
+
+[node name="CRTOverlay" type="ColorRect" parent="." unique_id=1528533540]
+material = SubResource("ShaderMaterial_hhwow")
+layout_mode = 0
+offset_left = -6.0
+offset_right = 485.0
+offset_bottom = 278.0
+color = Color(0, 0.003921569, 0, 0.11372549)

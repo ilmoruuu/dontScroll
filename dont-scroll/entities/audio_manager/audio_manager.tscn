@@ -11,9 +11,12 @@ script = ExtResource("1_oa7eb")
 [node name="MainMusic" type="AudioStreamPlayer" parent="." unique_id=1783223809]
 stream = ExtResource("1_pmo2f")
 autoplay = true
+bus = &"Music"
 
 [node name="BenchMusic" type="AudioStreamPlayer" parent="." unique_id=639752994]
 stream = ExtResource("2_oa7eb")
+bus = &"Music"
 
 [node name="DeathEffect" type="AudioStreamPlayer" parent="." unique_id=624031058]
 stream = ExtResource("4_5x08n")
+bus = &"SFX"
