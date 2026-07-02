@@ -20,6 +20,7 @@
 [ext_resource type="Script" uid="uid://bwcs3bcuc0rro" path="res://entities/enemies/enemy.gd" id="17_3u7fm"]
 [ext_resource type="PackedScene" uid="uid://c2a8len2vs3wb" path="res://entities/enemies/iutuba.tscn" id="18_fpbt8"]
 [ext_resource type="PackedScene" uid="uid://qtm2nlqomd3g" path="res://entities/enemies/zapi.tscn" id="19_2y8a1"]
+[ext_resource type="PackedScene" uid="uid://b3670i1lka5rw" path="res://entities/door/door.tscn" id="21_j5fng"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_4bc74"]
 
@@ -178,3 +179,6 @@ script = ExtResource("17_3u7fm")
 [node name="zapi" parent="Enemies" unique_id=132603691 instance=ExtResource("19_2y8a1")]
 position = Vector2(186, 18)
 script = ExtResource("17_3u7fm")
+
+[node name="Door" parent="." unique_id=838072904 instance=ExtResource("21_j5fng")]
+position = Vector2(-123, 144)
