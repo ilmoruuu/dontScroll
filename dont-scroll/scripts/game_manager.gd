@@ -18,6 +18,7 @@ var inventory: Array = []
 
 # ── Estados de BEM ────────────────────────────────────
 enum BEMState { CALM, MEDIUM, ANXIOUS, OVERLOAD }
+signal phase_changed(new_phase: int)
 
 func _process(delta: float) -> void:
 	if not player_on_bench:
@@ -71,11 +72,37 @@ func _do_respawn() -> void:
 func _ready() -> void:
 	pause_bem()
 
+var bem_locked: bool = false
+
 func pause_bem() -> void:
 	set_process(false)
 
 func resume_bem() -> void:
+	if bem_locked:
+		return
 	set_process(true)
+
+func set_phase(new_phase: int) -> void:
+	if new_phase == current_phase:
+		return
+	current_phase = new_phase
+	bem = 0.0
+	bem_locked = true
+	pause_bem()
+
+func unlock_bem() -> void:
+	bem_locked = false
+	resume_bem()
+
+func announce_phase(new_phase: int) -> void:
+	phase_changed.emit(new_phase)
+	
+func start_first_phase() -> void:
+	current_phase = 1
+	bem = 0.0
+	bem_locked = true
+	pause_bem()
+	announce_phase(1)
 
 func game_over() -> void:
 	bem = 60.0

@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://clnlxaqnecyqi"]
+
+[ext_resource type="Script" uid="uid://dwpaln38p5457" path="res://scenes/cutscenes/phase_banner.gd" id="1_87sp4"]
+
+[node name="PhaseBanner" type="CanvasLayer" unique_id=1779082486]
+script = ExtResource("1_87sp4")
+
+[node name="Container" type="Control" parent="." unique_id=233814332]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TitleLabel" type="Label" parent="Container" unique_id=5069406]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 100.0
+offset_bottom = 123.0
+grow_horizontal = 2
+horizontal_alignment = 1
+
+[node name="SubtitleLabel" type="Label" parent="Container" unique_id=1097179513]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 150.0
+offset_bottom = 182.0
+grow_horizontal = 2
+horizontal_alignment = 1
+
+[node name="FadeRect" type="ColorRect" parent="." unique_id=1258207156]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)

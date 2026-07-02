@@ -1,0 +1,156 @@
+[gd_scene format=4 uid="uid://drarxlr3huiil"]
+
+[ext_resource type="Script" uid="uid://cy4jhmty8e3m4" path="res://scenes/levels/fase_2.gd" id="1_2ct6p"]
+[ext_resource type="PackedScene" uid="uid://cyqngwh0fw0rp" path="res://entities/exposition_bar/exposition_bar.tscn" id="2_o1cbs"]
+[ext_resource type="PackedScene" uid="uid://d233rvyx64hw4" path="res://entities/player/player.tscn" id="3_6ovq3"]
+[ext_resource type="PackedScene" uid="uid://2ymphgwd4s1q" path="res://entities/platforms/platform.tscn" id="4_jjwpk"]
+[ext_resource type="PackedScene" uid="uid://cp5omlcb70p3p" path="res://entities/platforms/platformVertical.tscn" id="5_2iukj"]
+[ext_resource type="PackedScene" uid="uid://b0l624biomxqs" path="res://entities/platforms/platformBlink.tscn" id="6_4m33e"]
+[ext_resource type="PackedScene" uid="uid://cnhwiul8mcx8m" path="res://entities/platforms/platformHorizontal.tscn" id="7_oynsh"]
+[ext_resource type="Texture2D" uid="uid://bslxjob44kog8" path="res://assets/tilesets/tile.png" id="8_qwgih"]
+[ext_resource type="Texture2D" uid="uid://665p2ayilrxh" path="res://assets/tilesets/tilset2.png" id="9_u5loq"]
+[ext_resource type="PackedScene" uid="uid://ddhxcu8xpmlwj" path="res://scenes/levels/killzone.tscn" id="10_w5a8k"]
+[ext_resource type="PackedScene" uid="uid://b85sosryqw0xk" path="res://entities/bench/bench.tscn" id="11_i0y0q"]
+[ext_resource type="PackedScene" uid="uid://cyclxrltpbhhd" path="res://entities/PUs/PU_hammer.tscn" id="12_oyxpv"]
+[ext_resource type="PackedScene" uid="uid://ixxb5fnjii0y" path="res://scenes/levels/phase_exit.tscn" id="13_1uwuy"]
+[ext_resource type="PackedScene" uid="uid://28rqkifmmhr7" path="res://entities/PUs/PU_cap_and_pillow.tscn" id="14_jjbec"]
+[ext_resource type="PackedScene" uid="uid://ckjmesgeei2jv" path="res://entities/PUs/PU_juice.tscn" id="15_217bj"]
+[ext_resource type="PackedScene" uid="uid://cn553msgi2tbt" path="res://scenes/ui/effects/VFXLayer.tscn" id="16_qrfeo"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_4bc74"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4bc74"]
+texture = ExtResource("8_qwgih")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, -8, 8, -8, -8, 8, -8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, 8, 8, 8, 8, -8)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 4.4396324, -8, 8, -8, -8)
+2:2/0/physics_layer_0/polygon_1/points = PackedVector2Array(8, -8, -8, -8, -8, 8, 8, 8)
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mffd4"]
+texture = ExtResource("9_u5loq")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -0.78346443, -8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_gfa0o"]
+physics_layer_0/collision_layer = 1
+physics_layer_0/physics_material = SubResource("PhysicsMaterial_4bc74")
+sources/2 = SubResource("TileSetAtlasSource_4bc74")
+sources/3 = SubResource("TileSetAtlasSource_mffd4")
+
+[node name="Fase1" type="Node2D" unique_id=824388027 groups=["platform"]]
+script = ExtResource("1_2ct6p")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2013826959]
+
+[node name="ProgressBar" parent="CanvasLayer" unique_id=1379656205 instance=ExtResource("2_o1cbs")]
+offset_left = 16.0
+offset_top = 24.0
+offset_right = 116.0
+offset_bottom = 39.0
+max_value = 88.4
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1390131299]
+z_index = -1
+custom_minimum_size = Vector2(40, 0)
+anchors_preset = -1
+offset_left = -589.0
+offset_top = -278.0
+offset_right = 3474.0
+offset_bottom = 691.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0.14509805, 1)
+
+[node name="Player" parent="." unique_id=105345503 groups=["player"] instance=ExtResource("3_6ovq3")]
+position = Vector2(-106, 198)
+
+[node name="Plataformas" type="Node2D" parent="." unique_id=372417128]
+
+[node name="Platform4" parent="Plataformas" unique_id=313582456 instance=ExtResource("4_jjwpk")]
+position = Vector2(1104, 80)
+
+[node name="Platform2" parent="Plataformas" unique_id=1567841240 instance=ExtResource("4_jjwpk")]
+position = Vector2(416, 176)
+
+[node name="PlatformVertical5" parent="Plataformas" unique_id=1977518990 instance=ExtResource("5_2iukj")]
+position = Vector2(824, 96)
+
+[node name="PlatformVertical4" parent="Plataformas" unique_id=1358782588 instance=ExtResource("5_2iukj")]
+position = Vector2(190, 48)
+
+[node name="PlatformVertical2" parent="Plataformas" unique_id=1376744821 instance=ExtResource("5_2iukj")]
+position = Vector2(184, 144)
+
+[node name="PlatformVertical3" parent="Plataformas" unique_id=351965363 instance=ExtResource("5_2iukj")]
+position = Vector2(711, 128)
+amplitude = 20.0
+
+[node name="PlatformBrink" parent="Plataformas" unique_id=393779538 instance=ExtResource("6_4m33e")]
+position = Vector2(272, 112)
+
+[node name="PlatformBrink2" parent="Plataformas" unique_id=1463533790 instance=ExtResource("6_4m33e")]
+position = Vector2(565, 84)
+
+[node name="PlatformHorizontal" parent="Plataformas" unique_id=1118858037 instance=ExtResource("7_oynsh")]
+position = Vector2(510, 143)
+
+[node name="PlatformHorizontal3" parent="Plataformas" unique_id=586580635 instance=ExtResource("7_oynsh")]
+position = Vector2(427, 69)
+
+[node name="PlatformHorizontal2" parent="Plataformas" unique_id=433016487 instance=ExtResource("7_oynsh")]
+position = Vector2(608, 181)
+
+[node name="PlatformHorizontal4" parent="Plataformas" unique_id=401069339 instance=ExtResource("7_oynsh")]
+position = Vector2(1048, 208)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1434571743]
+tile_map_data = PackedByteArray("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AABDAAAAAgABAAIAAABEAAAAAgABAAIAAABFAAAAAgABAAIAAABGAAAAAgABAAIAAABHAAAAAgABAAIAAABIAAAAAgABAAIAAABJAAAAAwABAAAAAAA/AAgAAgABAAAAAABAAAgAAgABAAAAAABBAAgAAgABAAAAAAA/AAkAAgABAAIAAABAAAkAAgABAAIAAABBAAkAAgABAAIAAAA+AAgAAgAAAAAAAAA+AAkAAgAAAAIAAABCAAgAAgACAAAAAABCAAkAAgACAAIAAAA4AAwAAgAAAAAAAAA4AA0AAgAAAAIAAAAVABIAAgAAAAEAAAAjAA8AAgACAAAAAAAnAA8AAgAAAAAAAAAnABAAAgAAAAEAAAAnABEAAgAAAAEAAAAjABAAAgACAAEAAAAjABEAAgACAAEAAAAjABIAAgACAAEAAAAnABIAAgAAAAEAAACu/+T/AgAAAAEAAACV/9v/AgAAAAEAAAD9/w8AAgABAAAAAAD8/w8AAgABAAAAAAD7/w8AAgABAAAAAAD6/w8AAgABAAAAAAD5/w8AAgABAAAAAAD4/w8AAgABAAAAAAD3/w8AAgABAAAAAAD2/w8AAgABAAAAAAD1/w8AAwAAAAEAAAD1/wsAAgACAAEAAAD1/wwAAgACAAEAAAD1/w0AAgACAAEAAAD1/w4AAgACAAEAAAA=")
+tile_set = SubResource("TileSet_gfa0o")
+
+[node name="Killzone" parent="." unique_id=1128831628 instance=ExtResource("10_w5a8k")]
+visible = false
+position = Vector2(264, 273)
+
+[node name="Killzone2" parent="." unique_id=753596741 instance=ExtResource("10_w5a8k")]
+visible = false
+position = Vector2(550, 273)
+
+[node name="Bench2" parent="." unique_id=746857454 instance=ExtResource("11_i0y0q")]
+position = Vector2(270, 228)
+
+[node name="Bench" parent="." unique_id=1123229528 instance=ExtResource("11_i0y0q")]
+position = Vector2(-17, 228)
+
+[node name="Hammer" parent="." unique_id=327378327 instance=ExtResource("12_oyxpv")]
+position = Vector2(32, 228)
+
+[node name="PhaseExit" parent="." unique_id=62485990 instance=ExtResource("13_1uwuy")]
+position = Vector2(145, 181)
+
+[node name="Pijama" parent="." unique_id=808263721 instance=ExtResource("14_jjbec")]
+position = Vector2(127, 227)
+
+[node name="Juice" parent="." unique_id=1110919637 instance=ExtResource("15_217bj")]
+position = Vector2(81, 227)
+
+[node name="VfxLayer" parent="." unique_id=1759710778 instance=ExtResource("16_qrfeo")]

@@ -21,6 +21,7 @@ GameManager="*uid://c0c6n7o67sdwi"
 AudioManager="*uid://bn6g385v0dy7k"
 BenchDialogueUI="*uid://bqcqt5hn7281i"
 MinigameManager="*uid://cnry2qgjhqnxk"
+PhaseBanner="*uid://clnlxaqnecyqi"
 
 [display]
 

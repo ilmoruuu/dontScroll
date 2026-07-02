@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://d3u84rlftnb7t"]
+
+[node name="Fase2" type="Node2D" unique_id=1576387044]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=397526165]
+z_index = -1
+custom_minimum_size = Vector2(40, 0)
+anchors_preset = -1
+offset_left = -589.0
+offset_top = -278.0
+offset_right = 3474.0
+offset_bottom = 691.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0.14509805, 1)

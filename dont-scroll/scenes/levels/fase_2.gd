@@ -1,7 +1,4 @@
 extends Node2D
 
-func _ready() -> void:
-	GameManager.start_first_phase()
-
 func _exit_tree() -> void:
 	GameManager.pause_bem()
