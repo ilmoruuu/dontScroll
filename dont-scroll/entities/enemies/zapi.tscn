@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://qtm2nlqomd3g"]
+
+[ext_resource type="Texture2D" uid="uid://duv5rg6xyfiko" path="res://assets/enemies/idle/zapi.png" id="1_u22op"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jqp7e"]
+radius = 8.889104
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_45y0w"]
+atlas = ExtResource("1_u22op")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jp5l6"]
+atlas = ExtResource("1_u22op")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jqp7e"]
+animations = [{
+"frames": [{
+"duration": 3.3,
+"texture": SubResource("AtlasTexture_45y0w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jp5l6")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qdcf5"]
+
+[node name="zapi" type="CharacterBody2D" unique_id=132603691]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=856646484]
+position = Vector2(232, 139)
+shape = SubResource("CircleShape2D_jqp7e")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=569704916]
+position = Vector2(231.125, 138.5)
+scale = Vector2(0.976, 1)
+sprite_frames = SubResource("SpriteFrames_jqp7e")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.6904842
+
+[node name="FloorCheck" type="RayCast2D" parent="." unique_id=1330033960]
+position = Vector2(15, 20)
+
+[node name="WallCheck" type="RayCast2D" parent="." unique_id=535124849]
+position = Vector2(15, 0)
+
+[node name="HurtBox" type="Area2D" parent="." unique_id=1964912459]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=391965144]
+shape = SubResource("CircleShape2D_qdcf5")

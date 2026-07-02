@@ -4,6 +4,7 @@
 [ext_resource type="AudioStream" uid="uid://i3aru608m484" path="res://assets/audio/main_waltz_theme.mp3" id="1_pmo2f"]
 [ext_resource type="AudioStream" uid="uid://dgc0x8r7d6utd" path="res://assets/audio/bench_theme.mp3" id="2_oa7eb"]
 [ext_resource type="AudioStream" uid="uid://cs0wryrh1gg24" path="res://assets/audio/death_effect.mp3" id="4_5x08n"]
+[ext_resource type="AudioStream" uid="uid://dmha33qgkn4t4" path="res://assets/audio/door_opening.mp3" id="5_f38g5"]
 
 [node name="AudioManager" type="Node" unique_id=1071734051]
 script = ExtResource("1_oa7eb")
@@ -19,4 +20,10 @@ bus = &"Music"
 
 [node name="DeathEffect" type="AudioStreamPlayer" parent="." unique_id=624031058]
 stream = ExtResource("4_5x08n")
+<<<<<<< HEAD
 bus = &"SFX"
+=======
+
+[node name="DoorOpening" type="AudioStreamPlayer" parent="." unique_id=765729291]
+stream = ExtResource("5_f38g5")
+>>>>>>> b3c9176a8dde3271f5221445bc0bd42aad691847

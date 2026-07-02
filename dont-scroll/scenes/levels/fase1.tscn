@@ -16,6 +16,12 @@
 [ext_resource type="PackedScene" uid="uid://ixxb5fnjii0y" path="res://scenes/levels/phase_exit.tscn" id="13_3u7fm"]
 [ext_resource type="PackedScene" uid="uid://ckjmesgeei2jv" path="res://entities/PUs/PU_juice.tscn" id="13_d1ex0"]
 [ext_resource type="PackedScene" uid="uid://cn553msgi2tbt" path="res://scenes/ui/effects/VFXLayer.tscn" id="14_h28po"]
+[ext_resource type="PackedScene" uid="uid://dk85fxcwyw8nw" path="res://entities/enemies/aribook.tscn" id="15_h28po"]
+[ext_resource type="PackedScene" uid="uid://wvwtw3mekkrb" path="res://entities/enemies/estagram.tscn" id="16_ymah1"]
+[ext_resource type="Script" uid="uid://bwcs3bcuc0rro" path="res://entities/enemies/enemy.gd" id="17_3u7fm"]
+[ext_resource type="PackedScene" uid="uid://c2a8len2vs3wb" path="res://entities/enemies/iutuba.tscn" id="18_fpbt8"]
+[ext_resource type="PackedScene" uid="uid://qtm2nlqomd3g" path="res://entities/enemies/zapi.tscn" id="19_2y8a1"]
+[ext_resource type="PackedScene" uid="uid://b3670i1lka5rw" path="res://entities/door/door.tscn" id="21_j5fng"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_4bc74"]
 
@@ -65,7 +71,7 @@ script = ExtResource("1_ymah1")
 [node name="ProgressBar" parent="CanvasLayer" unique_id=1379656205 instance=ExtResource("1_f125c")]
 offset_left = 16.0
 offset_top = 24.0
-offset_right = 116.0
+offset_right = 157.0
 offset_bottom = 39.0
 max_value = 88.4
 
@@ -73,10 +79,10 @@ max_value = 88.4
 z_index = -1
 custom_minimum_size = Vector2(40, 0)
 anchors_preset = -1
-offset_left = -589.0
-offset_top = -278.0
-offset_right = 3474.0
-offset_bottom = 691.0
+offset_left = -582.0
+offset_top = -279.0
+offset_right = 3481.0
+offset_bottom = 690.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0.14509805, 1)
@@ -148,10 +154,14 @@ position = Vector2(270, 228)
 position = Vector2(-52, 227)
 
 [node name="Hammer" parent="." unique_id=327378327 instance=ExtResource("12_pvllh")]
+<<<<<<< HEAD
 position = Vector2(16, 175)
 
 [node name="PhaseExit" parent="." unique_id=62485990 instance=ExtResource("13_3u7fm")]
 position = Vector2(66, 181)
+=======
+position = Vector2(23, 130)
+>>>>>>> b3c9176a8dde3271f5221445bc0bd42aad691847
 
 [node name="Pijama" parent="." unique_id=808263721 instance=ExtResource("11_mhm5o")]
 position = Vector2(127, 227)
@@ -160,3 +170,23 @@ position = Vector2(127, 227)
 position = Vector2(162, 218)
 
 [node name="VfxLayer" parent="." unique_id=1759710778 instance=ExtResource("14_h28po")]
+
+[node name="Enemies" type="Node2D" parent="." unique_id=302892162]
+
+[node name="aribook" parent="Enemies" unique_id=2017140662 instance=ExtResource("15_h28po")]
+position = Vector2(735, 43)
+
+[node name="estagram" parent="Enemies" unique_id=99027874 instance=ExtResource("16_ymah1")]
+position = Vector2(-134, -97)
+script = ExtResource("17_3u7fm")
+
+[node name="iutuba" parent="Enemies" unique_id=270139472 instance=ExtResource("18_fpbt8")]
+position = Vector2(697, 150)
+script = ExtResource("17_3u7fm")
+
+[node name="zapi" parent="Enemies" unique_id=132603691 instance=ExtResource("19_2y8a1")]
+position = Vector2(186, 18)
+script = ExtResource("17_3u7fm")
+
+[node name="Door" parent="." unique_id=838072904 instance=ExtResource("21_j5fng")]
+position = Vector2(-123, 144)

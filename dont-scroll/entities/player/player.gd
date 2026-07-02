@@ -1,7 +1,8 @@
 extends CharacterBody2D
 
 @onready var animation: AnimatedSprite2D = $AnimatedSprite2D
-@onready var hammer_hitbox = $hammer_hitbox/CollisionShape2D
+@onready var hammer_area = $hammer_hitbox
+@onready var hammer_collision = $hammer_hitbox/CollisionShape2D
 
 enum PowerUpState { STANDARD, HAMMER, JUICE, PIJAMA }
 
@@ -81,9 +82,10 @@ func use_item():
 			is_using_item = false
 		PowerUpState.HAMMER:
 			animation.play("use_hammer")
-			hammer_hitbox.set_deferred("disabled", false)
+			await hammer_area.attack()
 		PowerUpState.JUICE:
 			animation.play("use_juice")
+			GameManager.bem_reduce(100.0)
 			await get_tree().create_timer(0.5).timeout
 			is_using_item = false
 			alter_state(PowerUpState.STANDARD)
@@ -106,11 +108,9 @@ func alter_state(new_state: PowerUpState):
 		PowerUpState.PIJAMA:
 			sufix = "_pijama"
 
-
 func _on_animated_sprite_2d_animation_finished() -> void:
 	if animation.animation == "use_hammer":
 		is_using_item = false
-		hammer_hitbox.set_deferred("disabled", true)
 
 func get_bem_suffix() -> String:
 	if current_state != PowerUpState.STANDARD:
@@ -121,3 +121,7 @@ func get_bem_suffix() -> String:
 			return "_vertigo"
 		_:
 			return ""
+
+
+func _on_hammer_hitbox_area_entered(area: Area2D) -> void:
+	pass # Replace with function body.

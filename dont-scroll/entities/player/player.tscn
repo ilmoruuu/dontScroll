@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://chhn1spiqesj3" path="res://assets/player/Walking_Hammer (16 x 16).png" id="15_b2kln"]
 [ext_resource type="Texture2D" uid="uid://duh74110uugr5" path="res://assets/player/Walking_Vertigo (16 x 16).png" id="16_b2kln"]
 [ext_resource type="Texture2D" uid="uid://dkfksggsrxg56" path="res://assets/player/Walking_Pijama (16 x 16).png" id="16_we0b7"]
+[ext_resource type="Script" uid="uid://bwnqsiq3856xb" path="res://entities/player/hammer_hitbox.gd" id="21_eyb6c"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_afbqv"]
 atlas = ExtResource("2_fkugw")
@@ -577,8 +578,8 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k80x8"]
 size = Vector2(15, 15)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_a8ku5"]
-size = Vector2(14, 14.875)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c3pqy"]
+size = Vector2(11, 12)
 
 [node name="Player" type="CharacterBody2D" unique_id=105345503]
 script = ExtResource("1_wr5hl")
@@ -604,11 +605,12 @@ offset_right = 10.0
 offset_bottom = 10.0
 color = Color(0.70035434, 0.0039975718, 0.27824256, 1)
 
-[node name="hammer_hitbox" type="Area2D" parent="." unique_id=2082669739]
-visible = false
+[node name="hammer_hitbox" type="Area2D" parent="." unique_id=1371489413]
+script = ExtResource("21_eyb6c")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="hammer_hitbox" unique_id=1757722576]
-shape = SubResource("RectangleShape2D_a8ku5")
-disabled = true
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hammer_hitbox" unique_id=1325188483]
+position = Vector2(13, 1)
+shape = SubResource("RectangleShape2D_c3pqy")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="area_entered" from="hammer_hitbox" to="." method="_on_hammer_hitbox_area_entered"]

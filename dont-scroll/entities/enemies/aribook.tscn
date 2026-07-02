@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://dk85fxcwyw8nw"]
+
+[ext_resource type="Texture2D" uid="uid://ni6x0evw3wb5" path="res://assets/enemies/idle/aribook.png" id="1_46efw"]
+[ext_resource type="Script" uid="uid://bwcs3bcuc0rro" path="res://entities/enemies/enemy.gd" id="1_jgn1o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jgn1o"]
+size = Vector2(14, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jgn1o"]
+atlas = ExtResource("1_46efw")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_32wra"]
+atlas = ExtResource("1_46efw")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jqp7e"]
+animations = [{
+"frames": [{
+"duration": 3.3,
+"texture": SubResource("AtlasTexture_jgn1o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_32wra")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qdcf5"]
+size = Vector2(13.75, 16.5)
+
+[node name="aribook" type="CharacterBody2D" unique_id=2017140662]
+script = ExtResource("1_jgn1o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2136977112]
+visible = false
+position = Vector2(194, 139.5)
+shape = SubResource("RectangleShape2D_jgn1o")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1859262747]
+position = Vector2(194, 139)
+scale = Vector2(1.124, 1)
+sprite_frames = SubResource("SpriteFrames_jqp7e")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.20094335
+
+[node name="FloorCheck" type="RayCast2D" parent="." unique_id=1739175082]
+position = Vector2(15, 20)
+target_position = Vector2(0, 30)
+
+[node name="WallCheck" type="RayCast2D" parent="." unique_id=1397164340]
+position = Vector2(15, 0)
+target_position = Vector2(25, 0)
+
+[node name="HurtBox" type="Area2D" parent="." unique_id=790957694]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=1915363182]
+position = Vector2(194.125, 139.75)
+shape = SubResource("RectangleShape2D_qdcf5")

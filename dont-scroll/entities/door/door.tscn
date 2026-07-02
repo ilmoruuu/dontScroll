@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://b3670i1lka5rw"]
+
+[ext_resource type="Texture2D" uid="uid://xpmwkehcf20i" path="res://assets/door/door.png" id="1_05v0y"]
+[ext_resource type="Script" uid="uid://bmts5lf1kw5pa" path="res://scripts/door.gd" id="1_dsbe1"]
+[ext_resource type="PackedScene" uid="uid://teslumdgcgy6" path="res://entities/bench/prompt.tscn" id="3_6sqah"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uq1c4"]
+
+[node name="Door" type="Node2D" unique_id=838072904]
+z_index = -1
+script = ExtResource("1_dsbe1")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1594872208]
+texture = ExtResource("1_05v0y")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1570985742]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1216834503]
+visible = false
+shape = SubResource("RectangleShape2D_uq1c4")
+
+[node name="Prompt" parent="." unique_id=906823716 instance=ExtResource("3_6sqah")]
+visible = false
+position = Vector2(0, -33)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
