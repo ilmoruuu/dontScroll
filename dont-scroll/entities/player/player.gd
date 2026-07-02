@@ -84,6 +84,7 @@ func use_item():
 			hammer_hitbox.set_deferred("disabled", false)
 		PowerUpState.JUICE:
 			animation.play("use_juice")
+			GameManager.bem_reduce(100.0)
 			await get_tree().create_timer(0.5).timeout
 			is_using_item = false
 			alter_state(PowerUpState.STANDARD)
