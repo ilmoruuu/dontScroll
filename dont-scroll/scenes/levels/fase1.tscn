@@ -64,7 +64,7 @@ script = ExtResource("1_ymah1")
 [node name="ProgressBar" parent="CanvasLayer" unique_id=1379656205 instance=ExtResource("1_f125c")]
 offset_left = 16.0
 offset_top = 24.0
-offset_right = 116.0
+offset_right = 157.0
 offset_bottom = 39.0
 max_value = 88.4
 
@@ -72,10 +72,10 @@ max_value = 88.4
 z_index = -1
 custom_minimum_size = Vector2(40, 0)
 anchors_preset = -1
-offset_left = -589.0
-offset_top = -278.0
-offset_right = 3474.0
-offset_bottom = 691.0
+offset_left = -582.0
+offset_top = -279.0
+offset_right = 3481.0
+offset_bottom = 690.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0.14509805, 1)
