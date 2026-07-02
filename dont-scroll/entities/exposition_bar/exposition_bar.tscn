@@ -18,10 +18,20 @@ border_width_bottom = 1
 border_color = Color(1, 1, 1, 1)
 
 [node name="ProgressBar" type="ProgressBar" unique_id=1379656205]
-offset_right = 100.0
-offset_bottom = 15.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 165.0
+offset_bottom = 19.0
 theme_override_styles/background = SubResource("StyleBoxFlat_m5a1v")
 theme_override_styles/fill = SubResource("StyleBoxFlat_0hx70")
-max_value = 50.0
 show_percentage = false
 script = ExtResource("1_b5vg5")
+
+[node name="Label" type="Label" parent="." unique_id=647765989]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 14.0
+offset_right = 121.0
+offset_bottom = 26.0
+theme_override_font_sizes/font_size = 8
+text = "BARRA DE EXPOSIÇÃO MENTAL"

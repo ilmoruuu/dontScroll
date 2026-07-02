@@ -85,6 +85,7 @@ func use_item():
 			await hammer_area.attack()
 		PowerUpState.JUICE:
 			animation.play("use_juice")
+			GameManager.bem_reduce(100.0)
 			await get_tree().create_timer(0.5).timeout
 			is_using_item = false
 			alter_state(PowerUpState.STANDARD)

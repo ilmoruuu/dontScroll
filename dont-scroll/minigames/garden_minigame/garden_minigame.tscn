@@ -51,10 +51,10 @@ offset_bottom = 195.0
 layout_mode = 0
 offset_left = 6.0
 offset_top = 5.0
-offset_right = 363.0
+offset_right = 317.0
 offset_bottom = 52.0
 theme_override_font_sizes/font_size = 10
-text = "Regue algumas flores
+text = "Dê uma pausa! Vamos apreciar singelos momentos da vida!
 Clique e segure em cima das flores para regá-las"
 
 [node name="Flor1" type="TextureRect" parent="Control/Panel" unique_id=1972135622 node_paths=PackedStringArray("progress_bar")]
