@@ -1,6 +1,24 @@
 [gd_scene format=3 uid="uid://o4msmqv42yb5"]
 
 [ext_resource type="Script" uid="uid://c00xh2rhddchr" path="res://scenes/ui/main_menu.gd" id="1_sl1te"]
+[ext_resource type="Texture2D" uid="uid://b5lou53ktrop7" path="res://assets/dontScrollLogo.png" id="2_1g8jr"]
+[ext_resource type="Shader" uid="uid://b2l32acnshxbp" path="res://scenes/ui/effects/grayscale.gdshader" id="2_fe2o3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8uqc6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mhm5o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d1ex0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1g8jr"]
+shader = ExtResource("2_fe2o3")
+shader_parameter/gray_intensity = 0.0
+shader_parameter/glitch_intensity = 0.3
+shader_parameter/glitch_spike = 0.0
+shader_parameter/scan_line_amount = 0.3
+shader_parameter/vignette_intensity = 0.5
+shader_parameter/noise_amount = 0.03
+shader_parameter/time_scale = 2.0
 
 [node name="MainMenu" type="Control" unique_id=1407405502]
 layout_mode = 3
@@ -15,32 +33,58 @@ script = ExtResource("1_sl1te")
 layout_mode = 0
 offset_right = 480.0
 offset_bottom = 270.0
-color = Color(0, 0.019804968, 0.08940444, 1)
+color = Color(0.050980393, 0.050980393, 0.101960786, 1)
 
-[node name="Label" type="Label" parent="." unique_id=1227312318]
+[node name="Label" type="TextureRect" parent="." unique_id=68697401]
 layout_mode = 0
-offset_left = 328.0
-offset_top = 69.0
-offset_right = 407.0
-offset_bottom = 92.0
-text = "dontScroll"
+offset_left = 128.0
+offset_top = 62.0
+offset_right = 583.0
+offset_bottom = 127.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_1g8jr")
+
+[node name="Label2" type="Label" parent="." unique_id=1572657192]
+layout_mode = 0
+offset_left = 202.0
+offset_top = 238.0
+offset_right = 275.0
+offset_bottom = 251.0
+theme_override_font_sizes/font_size = 9
+text = "@05C1NC0, 2026"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=197962047]
 layout_mode = 0
-offset_left = 326.0
-offset_top = 107.0
-offset_right = 414.0
-offset_bottom = 208.0
+offset_left = 176.0
+offset_top = 106.0
+offset_right = 300.0
+offset_bottom = 215.0
+pivot_offset = Vector2(117, 97)
+alignment = 1
 
 [node name="ButtonIniciar" type="Button" parent="VBoxContainer" unique_id=1692528362]
 layout_mode = 2
-text = "Iniciar"
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8uqc6")
+text = "INICIAR"
 
 [node name="ButtonOpções" type="Button" parent="VBoxContainer" unique_id=1005872165]
 layout_mode = 2
-text = "Opções"
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleBoxEmpty_mhm5o")
+text = "OPÇÕES"
 
 [node name="ButtonSair" type="Button" parent="VBoxContainer" unique_id=2059410320]
 layout_mode = 2
-text = "Sair
-"
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleBoxEmpty_d1ex0")
+text = "SAIR"
+
+[node name="CRTOverlay" type="ColorRect" parent="." unique_id=1837884053]
+material = SubResource("ShaderMaterial_1g8jr")
+layout_mode = 0
+offset_left = -1.0
+offset_top = -9.0
+offset_right = 480.0
+offset_bottom = 275.0
+color = Color(0, 0.003921569, 0, 0.11372549)

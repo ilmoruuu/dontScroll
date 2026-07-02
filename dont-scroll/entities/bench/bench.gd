@@ -8,12 +8,20 @@ var dialog = false
 
 ## Create functions from minigames here fellas! 
 func start_cat_minigame():
-	var scene = preload("res://minigames/CatMinigame.tscn")
+	var scene = preload("res://minigames/cat_minigame/CatMinigame.tscn")
 	var game = scene.instantiate()
 
 	get_tree().current_scene.add_child(game)
 
 	game.start(self)
+	
+func start_garden_minigame():
+	var scene = preload("res://minigames/garden_minigame/garden_minigame.tscn")
+	var game = scene.instantiate()
+	
+	get_tree().current_scene.add_child(game)
+	game.start(self)
+	
 func _on_area_2d_body_entered(body):
 	player_near = true
 	player_ref = body
@@ -33,9 +41,13 @@ func start_bench_dialog():
 	prompt.visible = false
 
 	AudioManager.enter_bench()
-
-	if randf() <= 0.5:
+	
+	var randon = randf()
+	
+	if randon <= 0.25:
 		start_cat_minigame()
+	elif randon > 0.25 and randon <= 0.5:
+		start_garden_minigame()
 	else:
 		BenchDialogueUI.start_random_event(self)
 

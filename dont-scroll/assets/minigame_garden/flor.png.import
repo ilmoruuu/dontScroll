@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bekppw1nv8xit"
-path="res://.godot/imported/slide2.jpg-11b5acc9268ca28d59ce0af5f019d0c6.ctex"
+uid="uid://ckhvs46cogcpr"
+path="res://.godot/imported/flor.png-47fbbb554e72caa838bc6ac0c79bfeff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/slide2.jpg"
-dest_files=["res://.godot/imported/slide2.jpg-11b5acc9268ca28d59ce0af5f019d0c6.ctex"]
+source_file="res://assets/minigame_garden/flor.png"
+dest_files=["res://.godot/imported/flor.png-47fbbb554e72caa838bc6ac0c79bfeff.ctex"]
 
 [params]
 
